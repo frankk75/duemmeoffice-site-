@@ -45,3 +45,28 @@ html{scroll-padding-top:96px}body{background:#fff;-webkit-font-smoothing:antiali
 @keyframes duemmePhotoMove{0%{transform:scale(1.07) translate3d(-2%,0,0)}50%{transform:scale(1.11) translate3d(1%,1%,0)}100%{transform:scale(1.14) translate3d(2%,-1%,0)}}
 @media(max-width:570px){.tiles.visual-tiles .visual-tile{min-height:132px;padding:14px;border-radius:16px}.tiles.visual-tiles .visual-tile strong{font-size:.83rem}.ecotek-partner{padding:18px}.ecotek-partner h2{font-size:1rem}.ecotek-partner p{font-size:.84rem}}
 @media(prefers-reduced-motion:reduce){.visual-tile::before{animation:none!important}.tiles.visual-tiles .visual-tile{transition:none!important}}
+
+
+/* V11: fotografia direttamente sul riquadro, senza layer nascosti */
+.tiles.visual-tiles a.visual-tile {
+  background-image: linear-gradient(180deg, rgba(9,29,47,.03) 0%, rgba(9,29,47,.23) 42%, rgba(8,27,46,.78) 100%), var(--tile-photo) !important;
+  background-position: center, center;
+  background-size: cover, cover;
+  background-repeat: no-repeat;
+  background-color: #123a5a;
+  animation: duemmeTileFloat 16s ease-in-out infinite alternate;
+}
+.tiles.visual-tiles a.visual-tile:nth-child(2){animation-duration:19s;animation-delay:-4s}
+.tiles.visual-tiles a.visual-tile:nth-child(3){animation-duration:18s;animation-delay:-7s}
+.tiles.visual-tiles a.visual-tile:nth-child(4){animation-duration:21s;animation-delay:-2s}
+.tiles.visual-tiles a.visual-tile::before,
+.tiles.visual-tiles a.visual-tile::after{display:none !important}
+@keyframes duemmeTileFloat {
+  0% {background-size:cover, 105% auto;background-position:center, 48% center}
+  100% {background-size:cover, 120% auto;background-position:center, 52% center}
+}
+@media (max-width:570px){
+  .tiles.visual-tiles a.visual-tile{background-size:cover,cover;animation:duemmeTilePanMobile 18s ease-in-out infinite alternate}
+  @keyframes duemmeTilePanMobile{0%{background-position:center,45% center}100%{background-position:center,55% center}}
+}
+@media(prefers-reduced-motion:reduce){.tiles.visual-tiles a.visual-tile{animation:none!important}}
