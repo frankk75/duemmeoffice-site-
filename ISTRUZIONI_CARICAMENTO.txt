@@ -1,0 +1,28 @@
+DUEMME SRL - SITO COMPLETO V5 (GitHub Pages)
+
+Repository: https://github.com/frankk75/duemmeoffice-site-
+
+ATTENZIONE: questo ZIP e' completo, non un aggiornamento parziale.
+Estrai il contenuto dello ZIP, poi carica i file e le cartelle
+NELLA RADICE del repository (branch main). Non caricare lo ZIP stesso.
+NON creare una cartella aggiuntiva con il nome dello ZIP.
+
+Nella radice devono esserci index.html, le cinque pagine dei servizi,
+.nojekyll e la cartella assets.
+Dentro assets: style.css, main.js, catalogo.js e cartella catalogo
+con cassa-touch.jpg e multifunzione.jpg.
+
+Per aggiornare da smartphone, usa Add file > Upload files.
+Se GitHub da mobile non mantiene le sottocartelle, carica
+separatamente nella radice, in assets e in assets/catalogo.
+Non cancellare il README se gia' presente.
+
+Settings > Pages:
+Source: Deploy from a branch
+Branch: main / (root)
+
+Indirizzo di prova:
+https://frankk75.github.io/duemmeoffice-site-/
+
+Le immagini del catalogo sono illustrative, non foto dei singoli modelli.
+L'eventuale dominio Aruba si colleghera' solo dopo la verifica del sito.
