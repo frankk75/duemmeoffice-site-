@@ -1,0 +1,15 @@
+DUEMME V6 - SITO COMPLETO + PANNELLO CATALOGO
+
+Carica TUTTI i file sul ramo main del repository.
+Percorso pannello: /gestione-catalogo.html
+
+ATTENZIONE SICUREZZA: il pannello NON e' autenticato e NON e' una vera area riservata.
+GitHub Pages non puo' gestire login server-side. Nessuno puo' pubblicare
+senza un account GitHub autorizzato al repository.
+
+Procedura: apri gestione-catalogo.html, modifica, esporta catalogo.json,
+poi aggiorna assets/data/catalogo.json dal repository GitHub.
+Per le foto nuove carica le immagini dentro assets/catalogo e inserisci
+il relativo percorso nel pannello, ad esempio assets/catalogo/modello.jpg.
+
+Le immagini presenti sono illustrative e non dei singoli modelli.
