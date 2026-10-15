@@ -1,0 +1,4 @@
+DUEMME V8 - SOLO AGGIORNAMENTO
+Sostituisci index.html nella radice e assets/style.css nella cartella assets.
+Crea assets/hero e carica i quattro .webp presenti nello ZIP.
+Non modificare gli altri file. Il link partner apre https://www.ecotek-online.it/ in una nuova scheda.
