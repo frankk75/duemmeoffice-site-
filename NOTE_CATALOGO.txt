@@ -1,0 +1,5 @@
+Catalogo DUEMME V5
+Le immagini sono illustrative delle categorie, non fotografie dei singoli modelli.
+Non affermare disponibilità o concessioni commerciali.
+Per aggiornare i prodotti modificare le relative pagine HTML.
+Il caricamento in GitHub richiede la conservazione della struttura assets/catalogo.
