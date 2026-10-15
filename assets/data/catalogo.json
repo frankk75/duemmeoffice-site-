@@ -1,1 +1,135 @@
-
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "multifunzioni-1",
+      "category": "multifunzioni",
+      "kind": "catalogo",
+      "brand": "Olivetti",
+      "name": "d-Copia 3524MF",
+      "type": "A4 · Bianco e nero",
+      "description": "Stampa, copia e scansione; gamma da 35 pagine/minuto.",
+      "image": "assets/catalogo/multifunzione.jpg",
+      "source": "https://www.olivetti.com/it/node/3258",
+      "price": "",
+      "active": true
+    },
+    {
+      "id": "multifunzioni-2",
+      "category": "multifunzioni",
+      "kind": "catalogo",
+      "brand": "Olivetti",
+      "name": "d-Color MF3533 / MF3534",
+      "type": "A4 · Colore",
+      "description": "Multifunzione a colori per gruppi di lavoro; fino a 35 pagine/minuto.",
+      "image": "assets/catalogo/multifunzione.jpg",
+      "source": "https://www.olivetti.com/it/office/stampanti-multifunzione",
+      "price": "",
+      "active": true
+    },
+    {
+      "id": "multifunzioni-3",
+      "category": "multifunzioni",
+      "kind": "catalogo",
+      "brand": "Olivetti",
+      "name": "d-Color MF2556 / MF3556",
+      "type": "A3 · Colore",
+      "description": "Sistemi laser professionali per documenti A3; fino a 25/35 pagine/minuto secondo il modello.",
+      "image": "assets/catalogo/multifunzione.jpg",
+      "source": "https://www.olivetti.com/it/office/stampanti-multifunzione",
+      "price": "",
+      "active": true
+    },
+    {
+      "id": "multifunzioni-4",
+      "category": "multifunzioni",
+      "kind": "catalogo",
+      "brand": "Olivetti",
+      "name": "d-Copia 5003MF / 6003MF",
+      "type": "A3 · Bianco e nero",
+      "description": "Multifunzione per elevati volumi; 50/60 pagine/minuto secondo il modello.",
+      "image": "assets/catalogo/multifunzione.jpg",
+      "source": "https://www.olivetti.com/it/office/stampanti-multifunzione/mfp-a3-bn/d-copia-5003mf-6003mf-7003mf",
+      "price": "",
+      "active": true
+    },
+    {
+      "id": "multifunzioni-5",
+      "category": "multifunzioni",
+      "kind": "catalogo",
+      "brand": "Ricoh",
+      "name": "IM C3010",
+      "type": "A3 · Colore",
+      "description": "Multifunzione Ricoh per i flussi documentali aziendali; configurazione e disponibilità da verificare.",
+      "image": "assets/catalogo/multifunzione.jpg",
+      "source": "https://www.ricoh-europe.com/",
+      "price": "",
+      "active": true
+    },
+    {
+      "id": "multifunzioni-6",
+      "category": "multifunzioni",
+      "kind": "catalogo",
+      "brand": "Ricoh",
+      "name": "IM C2510",
+      "type": "A3 · Colore",
+      "description": "Soluzione Ricoh per la gestione e la stampa documentale; dettagli da verificare su preventivo.",
+      "image": "assets/catalogo/multifunzione.jpg",
+      "source": "https://www.ricoh-europe.com/",
+      "price": "",
+      "active": true
+    },
+    {
+      "id": "multifunzioni-7",
+      "category": "multifunzioni",
+      "kind": "catalogo",
+      "brand": "Triumph-Adler",
+      "name": "2508ci",
+      "type": "A3 · Colore",
+      "description": "Multifunzione laser a colori con stampa, copia e scansione; fino a 25 pagine/minuto A4.",
+      "image": "assets/catalogo/multifunzione.jpg",
+      "source": "https://www.triumph-adler.com/ta-en-de/hardware/office-printer/product/2508ci",
+      "price": "",
+      "active": true
+    },
+    {
+      "id": "multifunzioni-8",
+      "category": "multifunzioni",
+      "kind": "catalogo",
+      "brand": "Triumph-Adler",
+      "name": "3508ci",
+      "type": "A3 · Colore",
+      "description": "Sistema multifunzione a colori A3, 35 pagine/minuto A4, fax opzionale.",
+      "image": "assets/catalogo/multifunzione.jpg",
+      "source": "https://www.triumph-adler.com/ta-en-de/hardware/office-printer/product/3508ci",
+      "price": "",
+      "active": true
+    },
+    {
+      "id": "registratori-1",
+      "category": "registratori",
+      "kind": "catalogo",
+      "brand": "Olivetti",
+      "name": "Form 100",
+      "type": "Registratore telematico compatto",
+      "description": "Batteria ricaricabile, doppio display, tastiera resistente all’acqua; adatto anche al commercio ambulante.",
+      "image": "assets/catalogo/cassa-touch.jpg",
+      "source": "https://www.olivetti.com/it/registratore-di-cassa-form-100",
+      "price": "",
+      "active": true
+    },
+    {
+      "id": "registratori-2",
+      "category": "registratori",
+      "kind": "catalogo",
+      "brand": "Olivetti",
+      "name": "Form 200",
+      "type": "Registratore telematico · linea storica",
+      "description": "Sistema di cassa con cover personalizzabili; modello storico, disponibilità e supporto da verificare.",
+      "image": "assets/catalogo/cassa-touch.jpg",
+      "source": "https://www.olivetti.com/it/corporate/press-room/news/olivetti-al-la-campagna-per-form200-il-registratore-di-cassa-innovativo-e",
+      "price": "",
+      "active": true
+    }
+  ]
+}
