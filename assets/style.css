@@ -23,3 +23,22 @@ html{scroll-padding-top:96px}body{background:#fff;-webkit-font-smoothing:antiali
 @media(max-width:820px){.nav nav.open{box-shadow:0 15px 26px rgba(14,48,79,.12)}.nav nav a{padding:8px 2px}.hero-grid{min-height:auto}.section{padding:64px 0}}
 @media(max-width:570px){body{line-height:1.57}h1{font-size:clamp(2.2rem,10vw,3.2rem)}h2{font-size:clamp(1.8rem,7vw,2.35rem)}.hero-grid{padding:55px 0}.card{padding:24px}.detail-contact{margin-top:30px}.prod-links .btn{width:100%}.brand-filter{gap:7px}.filter-chip{padding:9px 13px;font-size:.88rem}.contact-card{padding:24px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+/* DUEMME V8 – hero fotografica e partner Ecotek */
+.tiles.visual-tiles{gap:12px;padding-top:18px}
+.tiles.visual-tiles .visual-tile{isolation:isolate;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;text-align:left;gap:9px;min-height:148px;border-radius:13px;color:#fff;background:#1b4666;padding:17px;box-shadow:0 8px 19px rgba(10,43,72,.13);transition:transform .3s ease,box-shadow .3s ease}
+.visual-tile::before{content:'';position:absolute;z-index:-2;inset:-7%;background:var(--tile-photo) center/cover no-repeat;animation:duemme-photo-pan 18s ease-in-out infinite alternate}
+.visual-tile:nth-child(even)::before{animation-duration:22s;animation-delay:-6s}
+.visual-tile::after{content:'';position:absolute;z-index:-1;inset:0;background:linear-gradient(180deg,rgba(7,30,49,.06),rgba(7,30,49,.76) 87%)}
+.tiles.visual-tiles .visual-tile:hover,.tiles.visual-tiles .visual-tile:focus-visible{transform:translateY(-3px);box-shadow:0 12px 26px rgba(10,43,72,.25)}
+.tiles.visual-tiles .tile-icon{font-size:1.45rem;line-height:1;color:#f1f8ff;margin:0;text-shadow:0 2px 10px #102b49}
+.tiles.visual-tiles .visual-tile strong{font-size:clamp(.82rem,1.4vw,1rem);line-height:1.22;text-shadow:0 2px 9px #071e35}
+.ecotek-partner{margin-top:18px;border-radius:14px;padding:19px 20px;background:#fff;border:1px solid #c5dcec;box-shadow:0 6px 18px rgba(21,70,108,.07)}
+.ecotek-partner-label{display:block;font-size:.67rem;letter-spacing:.12em;font-weight:850;color:#226f86;margin-bottom:8px}
+.ecotek-partner h2{font-size:clamp(.98rem,1.48vw,1.1rem);letter-spacing:-.02em;line-height:1.4;margin:0 0 8px;color:#173b51}
+.ecotek-partner p{font-size:.83rem;line-height:1.48;margin:0 0 13px;color:#4c6271}
+.ecotek-partner-link{display:inline-flex;gap:9px;align-items:center;background:#146b70;color:#fff;font-weight:750;padding:9px 14px;border-radius:9px;font-size:.84rem;transition:background .2s,transform .2s}
+.ecotek-partner-link:hover{background:#0e5358;transform:translateY(-1px)}
+@keyframes duemme-photo-pan{0%{transform:scale(1.03) translate3d(-1%,0,0)}100%{transform:scale(1.14) translate3d(1%,1%,0)}}
+@media(max-width:570px){.tiles.visual-tiles .visual-tile{min-height:125px;padding:12px}.tiles.visual-tiles .visual-tile strong{font-size:.8rem}.ecotek-partner{padding:16px}.ecotek-partner h2{font-size:1rem}}
+@media(prefers-reduced-motion:reduce){.visual-tile::before{animation:none!important}.tiles.visual-tiles .visual-tile{transition:none!important}}
