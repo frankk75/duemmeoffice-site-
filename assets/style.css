@@ -81,3 +81,19 @@ html{scroll-padding-top:96px}body{background:#fff;-webkit-font-smoothing:antiali
 .duemme-contacts--footer{font-size:.85rem;margin:0;color:#d3e1ec}
 .duemme-contacts--footer a:hover{color:white}
 @media(max-width:570px){.logo.duemme-brand img{width:123px}.nav{min-height:82px}.contact-card{overflow-wrap:anywhere}}
+
+/* V15 — intestazione professionale DUEMME, senza asset aggiuntivi */
+.top .nav-duemme{max-width:1160px;min-height:106px;display:grid;grid-template-columns:156px minmax(205px,1fr) 122px auto;grid-template-areas:"brand info art navigation";gap:12px 24px;align-items:center;padding:12px 0}
+.nav-duemme .duemme-brand{grid-area:brand;display:flex;justify-content:flex-start;align-items:center;overflow:hidden}
+.nav-duemme .duemme-brand img{display:block;width:150px;max-width:100%;max-height:96px;object-fit:contain;object-position:left center}
+.nav-duemme-info{grid-area:info;min-width:0;display:flex;flex-direction:column;gap:7px;color:#173651;font-size:13px;line-height:1.3}
+.nav-duemme-info a{transition:color .2s}.nav-duemme-info a:hover{color:#146ca9}
+.nav-duemme-address{display:flex;align-items:center;gap:8px;font-weight:720}.nav-duemme-address small{font-size:12px;font-weight:500;color:#657d8d}
+.nav-duemme-dot{font-size:25px;color:#28769c;line-height:1}
+.nav-duemme-channels{display:flex;gap:8px 15px;flex-wrap:wrap}.nav-duemme-channels a{font-size:12px;font-weight:680;white-space:nowrap}
+.nav-duemme-art{grid-area:art;display:flex;align-items:center;gap:3px;color:#416d8e;opacity:.86;justify-content:center}.nav-duemme-art span{display:inline-flex;width:57px;height:58px;align-items:center}.nav-duemme-art svg{width:100%;height:100%}
+.nav-duemme nav{grid-area:navigation;display:flex;flex-wrap:wrap;justify-content:flex-end;max-width:295px;gap:10px 14px}.nav-duemme nav a{font-size:12px}
+.nav-duemme .menu{grid-area:menu}
+@media(max-width:1020px){.top .nav-duemme{grid-template-columns:142px minmax(0,1fr) 104px 44px;grid-template-areas:"brand info art menu";min-height:100px}.nav-duemme .duemme-brand img{width:137px;max-height:85px}.nav-duemme nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;padding:16px 22px;flex-direction:column;max-width:none;box-shadow:0 18px 30px #163a5b22}.nav-duemme nav.open{display:flex}.nav-duemme .menu{display:block;justify-self:end}.nav-duemme-art span{width:48px}}
+@media(max-width:650px){.top .nav-duemme{grid-template-columns:102px minmax(0,1fr) 40px;grid-template-areas:"brand info menu";gap:9px;padding:7px 0;min-height:90px}.nav-duemme .duemme-brand img{width:98px;max-height:83px}.nav-duemme-info{font-size:11px;gap:4px}.nav-duemme-address{gap:3px}.nav-duemme-dot{font-size:18px}.nav-duemme-address small{font-size:10px}.nav-duemme-channels{gap:3px;flex-direction:column}.nav-duemme-channels a{font-size:10px;overflow-wrap:anywhere;white-space:normal}.nav-duemme-art{display:none}.nav-duemme .menu{font-size:1.5rem}}
+@media(max-width:390px){.top .nav-duemme{grid-template-columns:82px minmax(0,1fr) 34px}.nav-duemme .duemme-brand img{width:82px}.nav-duemme-channels a{font-size:9.5px}}
