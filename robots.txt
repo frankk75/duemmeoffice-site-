@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /gestione-catalogo.html
+Sitemap: https://www.duemmeoffice.it/sitemap.xml
