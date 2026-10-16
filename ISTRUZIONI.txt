@@ -1,0 +1,2 @@
+DUEMME V14 - SOLO AGGIORNAMENTO
+Carica tutti i file HTML nella radice del repository; sostituisci assets/style.css e aggiungi assets/logo-duemme.png direttamente nella cartella assets. Nessuna nuova cartella.
