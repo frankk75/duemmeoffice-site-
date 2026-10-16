@@ -110,3 +110,14 @@ body.is-scrolled .nav{min-height:74px}
 .contact-card a{color:#0d5d97;font-weight:700}
 .contact-card a:hover,.duemme-contacts--footer a:hover,.nav-duemme-channels a:hover{color:#1470b6}
 @media (prefers-reduced-motion:reduce){.top,.nav{transition:none!important}}
+
+/* DUEMME V18 – marchi selezionati nelle pagine catalogo */
+.marchi-duemme{background:#fff;border:1px solid #dde7ef;border-radius:16px;padding:23px 24px;margin:34px 0 5px;box-shadow:0 5px 18px rgba(15,51,78,.045)}
+.marchi-duemme h2{margin:0 0 5px;color:#19394f;font-size:clamp(1.18rem,2.4vw,1.48rem);letter-spacing:-.02em}
+.marchi-duemme p{margin:0 0 19px;font-size:.9rem;color:#546b7b;line-height:1.4}
+.marchi-duemme__row{display:grid;align-items:center;gap:12px;width:100%;min-width:0}
+.marchi-duemme__row--three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.marchi-duemme__row--four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.marchi-duemme__item{min-width:0;height:64px;display:flex;align-items:center;justify-content:center;padding:5px 9px;background:transparent}
+.marchi-duemme__item img{display:block;max-width:100%;max-height:48px;width:auto;height:auto;object-fit:contain}
+@media(max-width:570px){.marchi-duemme{padding:18px 12px}.marchi-duemme p{font-size:.83rem;margin-bottom:13px}.marchi-duemme__row{gap:4px}.marchi-duemme__item{height:45px;padding:2px}.marchi-duemme__item img{max-height:36px}}
