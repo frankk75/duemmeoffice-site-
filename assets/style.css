@@ -70,3 +70,14 @@ html{scroll-padding-top:96px}body{background:#fff;-webkit-font-smoothing:antiali
   @keyframes duemmeTilePanMobile{0%{background-position:center,45% center}100%{background-position:center,55% center}}
 }
 @media(prefers-reduced-motion:reduce){.tiles.visual-tiles a.visual-tile{animation:none!important}}
+
+/* DUEMME V14 – logo societario e contatti */
+.logo.duemme-brand{display:inline-flex;align-items:center;justify-content:flex-start;min-width:0;line-height:1}
+.logo.duemme-brand img{display:block;width:148px;max-width:100%;height:auto;object-fit:contain}
+.duemme-contacts{display:grid;gap:12px;margin:15px 0 0;font-style:normal}
+.duemme-contacts a{text-decoration:underline;text-underline-offset:3px}
+.duemme-contacts a:hover{color:#76cafa}
+.duemme-contacts strong{display:block;margin-bottom:2px}
+.duemme-contacts--footer{font-size:.85rem;margin:0;color:#d3e1ec}
+.duemme-contacts--footer a:hover{color:white}
+@media(max-width:570px){.logo.duemme-brand img{width:123px}.nav{min-height:82px}.contact-card{overflow-wrap:anywhere}}
