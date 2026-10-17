@@ -1,0 +1,2 @@
+Carica il contenuto di questo pacchetto nella root del repository GitHub Pages.
+Include gli ultimi aggiornamenti home/assistenza e la nuova immagine multifunzione senza artefatti.

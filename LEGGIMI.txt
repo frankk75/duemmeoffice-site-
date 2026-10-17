@@ -1,4 +1,3 @@
-DUEMME V23 - solo aggiornamento foto
-Nella root sostituire index.html, stampanti-multifunzione.html, registratori-telematici.html
-In assets sostituire style.css e aggiungere le due nuove immagini WebP.
-Nessuna nuova cartella. Tutti gli altri file rimangono invariati.
+Sostituisci soltanto index.html nella cartella principale del repository DUEMME.
+Il pulsante assistenza appare sotto la sezione fotografica in una fascia dedicata.
+Gli altri file V29 (assistenza-tecnica.html, assets/style.css, assets/assistenza-form.js) rimangono necessari e non vengono modificati.

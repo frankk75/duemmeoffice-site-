@@ -1,0 +1,25 @@
+DUEMME V21 – aggiornamento grafico/funzionale della homepage
+
+SOLO FILE MODIFICATI – nessuna nuova cartella o fotografia da caricare.
+
+NELLA CARTELLA PRINCIPALE di GitHub, sostituisci:
+- index.html
+- stampanti-multifunzione.html
+- registratori-telematici.html
+- arredamento-ufficio.html
+- materiali-consumo.html
+- assistenza-tecnica.html
+
+NELLA CARTELLA assets, sostituisci:
+- style.css
+- main.js
+
+Mantieni gli attuali file WebP, loghi, cataloghi e gestione catalogo.
+
+Novita': homepage in blu/azzurro con immagini esistenti, cards fotografiche, due CTA, carosello marchi, come funziona 3 passi, sezione Siracusa e provincia, Ecotek su sfondo contrastante, accessibilita' e animazioni leggere, navigazione con sezione attiva, form preventivi e assistenza.
+
+IMPORTANTE: GitHub Pages non invia email dal server. Il modulo prepara una email (mailto:) e l'utente deve premere INVIA nella propria app di posta. Pulsante copia richiesta alternativo. Non e' stato inserito WhatsApp perche' 0931 759890 non e' confermato come numero WhatsApp.
+
+Il sito usa foto illustrative gia' presenti in assets; non vengono aggiunte foto spacciate per ambienti reali dell'azienda.
+
+Consigliato: pubblicare successivamente informativa privacy aggiornata se si introduce un servizio esterno di raccolta moduli.
