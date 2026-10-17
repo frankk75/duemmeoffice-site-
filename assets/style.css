@@ -317,3 +317,27 @@ body.is-scrolled .top{box-shadow:0 8px 24px rgba(10,37,66,.14)}
 .du-service-catalog .prod-source{display:none!important}
 @media(max-width:760px){.du-solution-grid,.du-service-catalog .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:570px){.du-solution-grid,.du-service-catalog .product-grid{grid-template-columns:1fr}.du-service-catalog{padding:28px 0;margin:35px 0}.du-service-catalog>.container{width:calc(100% - 28px)}}
+
+/* DUEMME V25: pagine servizi essenziali, testo in alto e catalogo a griglia */
+body:has(.detail-hero) .detail-hero{padding:47px 0 43px;background:linear-gradient(125deg,#102c4a,#1b5783);}
+body:has(.detail-hero) .detail-hero .container{max-width:1160px}
+body:has(.detail-hero) .detail-hero h1{font-size:clamp(2rem,3.8vw,3.35rem);max-width:1000px;margin:13px 0 13px;line-height:1.13}
+body:has(.detail-hero) .detail-hero p{font-size:clamp(1rem,1.5vw,1.13rem);max-width:880px;margin-bottom:0}
+body:has(.detail-hero) main>.section{padding:42px 0 72px}
+body:has(.detail-hero) .detail-copy{max-width:1160px}
+body:has(.detail-hero) .detail-copy>.kicker,body:has(.detail-hero) .detail-copy>h2,body:has(.detail-hero) .detail-copy>.lead,body:has(.detail-hero) .detail-copy>.du-service-extra,body:has(.detail-hero) .detail-copy>.du-text-deepening{max-width:970px}
+body:has(.detail-hero) .detail-copy>h2{font-size:clamp(1.65rem,2.65vw,2.35rem);margin:8px 0 17px}
+body:has(.detail-hero) .detail-copy>.lead{font-size:1.05rem;line-height:1.78;color:#435a6a}
+body:has(.detail-hero) .du-service-extra,body:has(.detail-hero) .du-text-deepening p{font-size:1rem;line-height:1.78;color:#4b6173}
+body:has(.detail-hero) .detail-bullets{margin:24px 0 30px;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:1000px}
+body:has(.detail-hero) .detail-point{padding:14px 18px;background:#f5f8fa;border:1px solid #dee8ee;border-radius:11px;font-weight:600;font-size:.95rem}
+body:has(.detail-hero) .du-service-catalog{margin-top:36px;padding-top:36px;border-top:1px solid #dce7ef}
+body:has(.detail-hero) .du-service-catalog h2{font-size:clamp(1.6rem,2.9vw,2.25rem);margin:8px 0 15px}
+body:has(.detail-hero) .du-service-catalog .product-grid,body:has(.detail-hero) .du-service-catalog .du-category-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+body:has(.detail-hero) .prod,body:has(.detail-hero) .du-category-grid>*{border-radius:14px;border:1px solid #dbe7ef;box-shadow:0 7px 20px rgba(16,44,74,.06);background:#fff}
+body:has(.detail-hero) .prod-photo{height:220px;background:#f1f5f8}
+body:has(.detail-hero) .prod-photo img{object-fit:contain;padding:14px}
+body:has(.detail-hero) .detail-contact{margin-top:44px;max-width:none;padding:31px 36px}
+body:has(.detail-hero) .back-link{margin-top:25px}
+@media(max-width:840px){body:has(.detail-hero) .du-service-catalog .product-grid,body:has(.detail-hero) .du-service-catalog .du-category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:610px){body:has(.detail-hero) .detail-hero{padding:31px 0 34px}body:has(.detail-hero) main>.section{padding:29px 0 52px}body:has(.detail-hero) .detail-bullets{grid-template-columns:1fr}body:has(.detail-hero) .du-service-catalog .product-grid,body:has(.detail-hero) .du-service-catalog .du-category-grid{grid-template-columns:1fr}body:has(.detail-hero) .detail-contact{padding:23px}}
