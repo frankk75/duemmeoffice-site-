@@ -408,9 +408,9 @@ body:has(.detail-hero) .back-link{margin-top:25px}
 /* DUEMME V39: intestazione a due livelli, menu visibile anche su smartphone */
 .du-top-v39{position:sticky;top:0;z-index:120;background:#fff;border-bottom:1px solid #dce8f0;box-shadow:0 5px 18px rgba(15,48,78,.08)}
 .du-top-v39 .du-header-upper{background:#fff}
-.du-header-inner{display:flex;align-items:center;gap:32px;padding:13px 0;min-height:108px}
-.du-header-brand{display:flex;align-items:center;flex:0 0 auto;width:158px;border-right:1px solid #d7e3ed;padding-right:17px}
-.du-header-brand img{display:block;width:136px;max-width:100%;height:auto;max-height:102px;object-fit:contain;object-position:left center}
+.du-header-inner{display:flex;align-items:center;gap:36px;padding:16px 0;min-height:122px}
+.du-header-brand{display:flex;align-items:center;justify-content:flex-start;flex:0 0 auto;width:188px;border-right:1px solid #d7e3ed;padding-right:20px}
+.du-header-brand img{display:block;width:170px;max-width:100%;height:auto;max-height:118px;object-fit:contain;object-position:left center}
 .du-header-contacts{display:grid;grid-template-columns:minmax(0,1fr);gap:4px;align-content:center;min-width:0}
 .du-header-contacts a{display:flex;gap:11px;align-items:center;line-height:1.35;color:#143754;font-size:14px;font-weight:650}
 .du-header-contacts a>span:first-child{display:inline-block;flex:none;color:#1470b6;font-size:19px;width:19px;text-align:center}
@@ -426,8 +426,8 @@ body:has(.detail-hero) .back-link{margin-top:25px}
 body.is-scrolled .du-top-v39 .du-header-inner{min-height:0}
 body.is-scrolled .du-top-v39{box-shadow:0 7px 20px rgba(16,44,74,.11)}
 html{scroll-padding-top:210px}
-@media(max-width:680px){.du-header-inner{gap:14px;min-height:92px;padding:8px 0}.du-header-brand{width:104px;padding-right:9px}.du-header-brand img{width:93px;max-height:86px}.du-header-contacts{gap:2px}.du-header-contacts a{gap:5px;font-size:10px}.du-header-contacts a strong{font-size:10.5px;line-height:1.15}.du-header-contacts a small{font-size:10px}.du-header-contacts a>span:first-child{width:15px;font-size:15px}.du-nav-row{gap:0;justify-content:space-between;min-height:48px}.du-top-v39 .du-nav-strip a{font-size:clamp(10px,2.6vw,13px)!important;padding:13px 3px!important}.du-top-v39 .du-nav-strip a:after{height:2px}html{scroll-padding-top:162px}}
-@media(max-width:360px){.du-header-inner{gap:8px}.du-header-brand{width:86px}.du-header-brand img{width:76px}.du-header-contacts a strong{font-size:9.5px}.du-nav-row{width:calc(100% - 16px)}.du-top-v39 .du-nav-strip a{font-size:9.6px!important;padding:13px 2px!important}}
+@media(max-width:680px){.du-header-inner{gap:14px;min-height:98px;padding:10px 0}.du-header-brand{width:118px;padding-right:10px}.du-header-brand img{width:108px;max-height:90px}.du-header-contacts{gap:2px}.du-header-contacts a{gap:5px;font-size:10px}.du-header-contacts a strong{font-size:10.5px;line-height:1.15}.du-header-contacts a small{font-size:10px}.du-header-contacts a>span:first-child{width:15px;font-size:15px}.du-nav-row{gap:0;justify-content:space-between;min-height:48px}.du-top-v39 .du-nav-strip a{font-size:clamp(10px,2.6vw,13px)!important;padding:13px 3px!important}.du-top-v39 .du-nav-strip a:after{height:2px}html{scroll-padding-top:168px}}
+@media(max-width:360px){.du-header-inner{gap:8px}.du-header-brand{width:96px}.du-header-brand img{width:88px;max-height:84px}.du-header-contacts a strong{font-size:9.5px}.du-nav-row{width:calc(100% - 16px)}.du-top-v39 .du-nav-strip a{font-size:9.6px!important;padding:13px 2px!important}}
 @media(prefers-reduced-motion:reduce){.du-top-v39 .du-nav-strip a:after{transition:none}}
 
 /* DUEMME V42 — hero full width come anteprima approvata */
