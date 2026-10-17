@@ -1,2 +1,11 @@
-DUEMME V14 - SOLO AGGIORNAMENTO
-Carica tutti i file HTML nella radice del repository; sostituisci assets/style.css e aggiungi assets/logo-duemme.png direttamente nella cartella assets. Nessuna nuova cartella.
+DUEMME V22 - SEO fotocopiatrici e multifunzioni Siracusa
+
+Aggiornamento da caricare su GitHub:
+- Nella root del repository: index.html, stampanti-multifunzione.html, sitemap.xml
+- Dentro la cartella esistente assets: style.css
+
+Non creare nuove cartelle. Non sovrascrivere altri file.
+Dopo il deploy, in Google Search Console > Controllo URL inserire:
+https://www.duemmeoffice.it/stampanti-multifunzione.html
+e richiedere l'indicizzazione; in Sitemap controllare che sitemap.xml risulti letta.
+Il ranking nei risultati Google non è garantito.
