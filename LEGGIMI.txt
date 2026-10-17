@@ -1,9 +1,4 @@
-Aggiornamento V10 DUEMME
-
-Carica questi file:
-- index.html nella radice del repository
-- style.css nella cartella assets (sostituisci)
-- le 4 immagini .webp direttamente nella cartella assets
-
-Non creare nuove cartelle.
-Le immagini dei quattro riquadri sono ora richiamate da assets/multifunzione.webp, assets/registratori.webp, assets/arredo.webp e assets/forniture.webp.
+DUEMME V23 - solo aggiornamento foto
+Nella root sostituire index.html, stampanti-multifunzione.html, registratori-telematici.html
+In assets sostituire style.css e aggiungere le due nuove immagini WebP.
+Nessuna nuova cartella. Tutti gli altri file rimangono invariati.
