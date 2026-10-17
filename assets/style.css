@@ -297,3 +297,10 @@ body.is-scrolled .top{box-shadow:0 8px 24px rgba(10,37,66,.14)}
 .du-seo-faq a{color:#1268a6;text-decoration:underline;text-underline-offset:2px}
 .du-seo-inline{color:#0c6098;font-weight:750;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:720px){.du-seo-local{padding:22px 17px}.du-seo-local-grid{grid-template-columns:1fr}.du-seo-benefits{grid-template-columns:1fr}.du-seo-local-photo{max-height:250px}}
+
+/* V23: copertine fotografiche delle pagine servizi */
+.du-detail-cover{margin-top:26px;margin-bottom:-18px}
+.du-detail-cover figure{position:relative;margin:0;border-radius:20px;background:linear-gradient(135deg,#f5f8fb,#dcebf5);border:1px solid #d7e4ed;overflow:hidden;display:flex;justify-content:center;align-items:center;min-height:230px;max-height:460px}
+.du-detail-cover img{width:100%;max-width:760px;height:min(44vw,400px);min-height:210px;object-fit:contain;display:block;padding:16px 20px 54px}
+.du-detail-cover figcaption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,#102c4a 0%,rgba(16,44,74,.90) 60%,transparent);color:#fff;padding:20px 24px 17px;font-weight:750;font-size:clamp(.9rem,1.6vw,1.1rem)}
+@media(max-width:640px){.du-detail-cover{margin-top:16px}.du-detail-cover figure{min-height:210px}.du-detail-cover img{min-height:200px;height:250px;padding:10px 6px 43px}}
