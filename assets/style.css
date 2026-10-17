@@ -432,7 +432,7 @@ html{scroll-padding-top:210px}
 
 /* DUEMME V42 — hero full width come anteprima approvata */
 .du-hero-v40{position:relative;overflow:hidden;isolation:isolate;background:#102c4a;min-height:clamp(560px,70vh,760px)}
-.du-hero-v40::before{content:"";position:absolute;inset:0;background-image:url('duemme-hero-ufficio.webp');background-position:right center;background-size:cover;background-repeat:no-repeat;z-index:0;pointer-events:none}
+.du-hero-v40::before{content:"";position:absolute;inset:0;width:100%;height:100%;border:0;border-radius:0;left:0;right:0;top:0;bottom:0;background-image:url('duemme-hero-panoramico.webp');background-position:center center;background-size:cover;background-repeat:no-repeat;z-index:0;pointer-events:none}
 .du-hero-v40::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(16,44,74,.94) 0%,rgba(16,44,74,.90) 32%,rgba(16,44,74,.64) 50%,rgba(16,44,74,.20) 72%,rgba(16,44,74,.08) 100%);z-index:1;pointer-events:none}
 .du-hero-v40 .du-hero-v40-inner{position:relative;z-index:2;display:flex;align-items:center;min-height:clamp(560px,70vh,760px);padding:64px 0 70px}
 .du-hero-v40 .du-hero-copy{max-width:620px;position:relative;z-index:2}
