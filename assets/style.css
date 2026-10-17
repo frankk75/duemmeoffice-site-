@@ -304,3 +304,16 @@ body.is-scrolled .top{box-shadow:0 8px 24px rgba(10,37,66,.14)}
 .du-detail-cover img{width:100%;max-width:760px;height:min(44vw,400px);min-height:210px;object-fit:contain;display:block;padding:16px 20px 54px}
 .du-detail-cover figcaption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,#102c4a 0%,rgba(16,44,74,.90) 60%,transparent);color:#fff;padding:20px 24px 17px;font-weight:750;font-size:clamp(.9rem,1.6vw,1.1rem)}
 @media(max-width:640px){.du-detail-cover{margin-top:16px}.du-detail-cover figure{min-height:210px}.du-detail-cover img{min-height:200px;height:250px;padding:10px 6px 43px}}
+
+/* DUEMME V24 - cataloghi servizi */
+.du-service-catalog{width:100%;margin:46px 0;padding:40px 0;background:#f1f6fa;border-radius:18px}
+.du-service-catalog>.container{width:calc(100% - 44px);max-width:1160px;margin:auto}
+.du-service-catalog h2{margin:10px 0 12px}.du-service-catalog .lead{margin-bottom:26px}
+.du-solution-grid,.du-service-catalog .product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.du-solution-card{display:flex;flex-direction:column;min-height:206px;background:#fff;padding:25px;border:1px solid #d9e5ed;border-radius:15px;box-shadow:0 6px 22px #103b5910;transition:transform .2s ease,box-shadow .2s ease}
+.du-solution-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px #103b5920}
+.du-solution-card h3{margin:0 0 10px;color:#102c4a}.du-solution-card p{color:#536b7e;flex:1;margin-bottom:14px}.du-solution-link{font-weight:750;color:#1269a6}
+.du-service-extra{margin:15px 0;color:#4e6375;max-width:780px}
+.du-service-catalog .prod-source{display:none!important}
+@media(max-width:760px){.du-solution-grid,.du-service-catalog .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:570px){.du-solution-grid,.du-service-catalog .product-grid{grid-template-columns:1fr}.du-service-catalog{padding:28px 0;margin:35px 0}.du-service-catalog>.container{width:calc(100% - 28px)}}
