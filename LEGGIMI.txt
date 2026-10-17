@@ -1,1 +1,2 @@
-V39 – Intestazione DUEMME stile Ecotek. Caricare nelle cartelle esistenti i 7 HTML e assets/style.css e assets/main.js. Nessuna nuova cartella; non sostituire catalogo, foto o altri file.
+Aggiornamento V40: sostituire index.html nella root; assets/style.css e assets/duemme-hero-ufficio.webp nella cartella assets esistente.
+La fascia richiesta assistenza tecnica e tutto quanto segue rimangono invariati.

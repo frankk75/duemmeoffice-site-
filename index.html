@@ -51,17 +51,7 @@
 @keyframes duemmeTileBreathe{from{filter:saturate(1) brightness(1)}to{filter:saturate(1.1) brightness(1.08)}}
 @media(prefers-reduced-motion:reduce){.tiles.visual-tiles a.visual-tile{animation:none!important}}
 </style>
-<style id="duemme-v26-hero">
-.du-hero-copy{position:relative;z-index:2}
-.du-hero #du-hero-title{font-size:clamp(2.25rem,4.15vw,4.2rem);letter-spacing:-.045em;line-height:1.115;text-wrap:balance;max-width:850px}
-.du-hero #du-hero-title span{color:#a5e1ff}
-.du-hero-copy>p{max-width:690px;font-size:clamp(1.01rem,1.3vw,1.19rem);line-height:1.7;color:#e7f3fd}
-.du-hero-photos figure{box-shadow:0 18px 42px rgba(0,15,35,.23)}
-.du-hero .du-btn{transition:transform .2s ease,box-shadow .2s ease}
-.du-hero .du-btn:hover{transform:translateY(-3px);box-shadow:0 12px 22px rgba(0,20,45,.2)}
-@media(max-width:820px){.du-hero #du-hero-title{font-size:clamp(2rem,6.6vw,3.2rem)}}
-@media(prefers-reduced-motion:reduce){.du-hero .du-btn{transition:none}}
-</style><style>
+<style>
 /* V30: assistenza sempre visibile subito dopo le foto hero */
 .du-assist-promo{background:linear-gradient(110deg,#103454,#145e8a);color:#fff;padding:22px 0;border-top:1px solid #ffffff33}
 .du-assist-promo-layout{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
@@ -76,22 +66,18 @@
 </style></head><body>
 <header class="top du-top-v39" id="site-header"><div class="du-header-upper"><div class="container du-header-inner"><a aria-label="Duemme S.r.l. – Homepage" class="du-header-brand" href="#home"><img alt="DUEMME S.r.l. – Esperienza e Innovazione" height="103" src="assets/logo-duemme.png" width="148"/></a><div class="du-header-contacts"><a href="https://www.google.com/maps/search/?api=1&amp;query=Viale+Scala+Greca+157+Siracusa" rel="noopener noreferrer" target="_blank"><span aria-hidden="true">⌖</span><span><strong>Viale Scala Greca 157</strong><small>96100 Siracusa (SR)</small></span></a><a href="tel:+390931759890"><span aria-hidden="true">☎</span><strong>0931 759890</strong></a><a href="mailto:amministrazione@duemmeoffice.it"><span aria-hidden="true">✉</span><strong>amministrazione@duemmeoffice.it</strong></a></div></div></div><nav aria-label="Navigazione principale" class="du-nav-strip" id="links"><div class="container du-nav-row"><a aria-current="page" class="is-active" href="#home">Home</a><a href="#azienda">Chi siamo</a><a href="#servizi">Servizi</a><a href="assistenza-tecnica.html">Assistenza</a><a href="#contatti">Contatti</a></div></nav></header>
 <main>
-<section aria-labelledby="du-hero-title" class="du-hero" id="home">
-<div class="container du-hero-grid">
-<div class="du-hero-copy du-reveal">
-<div class="du-eyebrow">DUEMME S.r.l. · Esperienza e innovazione · Siracusa</div>
-<h1 id="du-hero-title">Tutto per l’ufficio <span>a Siracusa</span>: stampa, registratori telematici, arredi e assistenza.</h1>
+<section class="du-hero du-hero-v40" id="home" aria-labelledby="du-hero-title">
+<div class="container du-hero-v40-inner"><div class="du-hero-copy du-reveal">
+<h1 id="du-hero-title">Tutto per l’ufficio<br>a Siracusa: stampa,<br>registratori telematici,<br>arredi e assistenza.</h1>
 <p>DUEMME S.r.l. affianca aziende, professionisti, scuole ed enti pubblici di Siracusa e provincia. Vendita, noleggio e assistenza tecnica di multifunzioni, registratori telematici e arredi per ufficio, con un unico referente dalla scelta all’installazione e all’assistenza.</p>
-<div class="du-actions"><a class="du-btn du-btn-white" data-request="Preventivo / informazioni" href="#richiesta">Richiedi preventivo <span aria-hidden="true">→</span></a><a class="du-btn du-btn-outline" href="tel:+390931759890"><span aria-hidden="true">☎</span> Chiama ora</a></div>
-<div aria-label="I nostri servizi" class="du-hero-facts"><span>Vendita e fornitura</span><span>Noleggio</span><span>Assistenza tecnica</span></div>
-</div>
-<div aria-label="Immagini illustrative delle soluzioni DUEMME" class="du-hero-photos du-reveal">
-<figure class="du-photo-main"><img alt="Multifunzione professionale per ufficio a Siracusa" decoding="async" fetchpriority="high" height="713" src="assets/hero-multifunzione-duemme-pulita.webp" width="800"/><figcaption>Stampa e multifunzione</figcaption></figure>
-<figure class="du-photo-small"><img alt="Registratore telematico touchscreen per negozi a Siracusa" decoding="async" height="1323" src="assets/hero-registratore-duemme.webp" width="1536"/><figcaption>Registratori telematici</figcaption></figure>
-<span class="du-hero-location">Viale Scala Greca 157 · Siracusa</span>
-</div>
-</div>
-</section>
+<div class="du-actions"><a class="du-btn du-btn-primary" href="#richiesta" data-request="Preventivo / informazioni">Richiedi preventivo <span aria-hidden="true">→</span></a><a class="du-btn du-btn-outline" href="tel:+390931759890"><span aria-hidden="true">☎</span> Chiama ora</a></div>
+</div></div></section>
+<div class="du-hero-services" aria-label="Le nostre principali soluzioni"><div class="container du-hero-services-grid">
+<a href="stampanti-multifunzione.html" class="du-hero-service"><span class="du-hero-service-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="22" width="36" height="23" rx="4"/><path d="M20 22V10h24v12M19 44v12h26V44"/><path d="M24 49h16M44 32h1"/></svg></span><strong>Stampa e multifunzioni</strong><span>Soluzioni per ogni esigenza professionale.</span></a>
+<a href="registratori-telematici.html" class="du-hero-service"><span class="du-hero-service-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><rect x="13" y="21" width="38" height="29" rx="4"/><rect x="21" y="27" width="22" height="10" rx="1"/><path d="M19 14h26v7M21 43h3m7 0h3m7 0h3"/></svg></span><strong>Registratori telematici</strong><span>Vendita, configurazione e assistenza.</span></a>
+<a href="arredamento-ufficio.html" class="du-hero-service"><span class="du-hero-service-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><rect x="23" y="9" width="20" height="25" rx="7"/><path d="M20 30h26v17H18V34m14 13v9m-10 0h20"/></svg></span><strong>Arredi per ufficio</strong><span>Soluzioni funzionali e di design.</span></a>
+<a href="assistenza-tecnica.html" class="du-hero-service"><span class="du-hero-service-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M39 11a16 16 0 0 0-18 20L10 44a7 7 0 0 0 10 10l13-13a16 16 0 0 0 20-18l-11 10-10-10z"/></svg></span><strong>Assistenza tecnica</strong><span>Un unico referente, sempre al tuo fianco.</span></a>
+</div></div>
 <section aria-label="Richiesta assistenza tecnica" class="du-assist-promo">
 <div class="container du-assist-promo-layout">
 <div class="du-assist-promo-copy"><span class="du-assist-promo-tag">SUPPORTO TECNICO DUEMME</span><strong>Hai bisogno di assistenza?</strong><span>Segnala un guasto alla tua multifunzione o al registratore telematico.</span></div>
