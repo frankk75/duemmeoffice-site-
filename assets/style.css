@@ -276,3 +276,24 @@ body.is-scrolled .top{box-shadow:0 8px 24px rgba(10,37,66,.14)}
 @media(max-width:650px){.top .nav-duemme{grid-template-columns:99px minmax(0,1fr) 38px;grid-template-areas:"brand info menu";gap:7px;min-height:91px;padding:7px 0}.nav-duemme .duemme-brand img{width:97px;max-height:79px}.nav-duemme-info{min-width:0;gap:4px;font-size:11px;line-height:1.25}.nav-duemme-address{gap:5px}.nav-duemme-address small{font-size:10px}.nav-duemme-channels{display:flex;flex-direction:column;gap:3px}.nav-duemme-channels a{font-size:10px;overflow-wrap:anywhere;white-space:normal}.nav-duemme-art{display:none}.nav-duemme .menu{display:block;grid-area:menu;justify-self:end}}
 @media(max-width:390px){.top .nav-duemme{grid-template-columns:83px minmax(0,1fr) 33px;gap:8px;grid-template-areas:"brand info menu"}.nav-duemme .duemme-brand img{width:82px}.nav-duemme-channels a{font-size:10px}}
 
+
+/* DUEMME V22 - pagina SEO fotocopiatrici e multifunzioni Siracusa */
+.du-seo-local{margin:46px 0 28px;padding:32px;border-radius:20px;border:1px solid #d2e2ef;background:linear-gradient(135deg,#f2f8fc 0%,#e7f2fa 100%)}
+.du-seo-local-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(220px,.75fr);align-items:center;gap:26px}
+.du-seo-local h2{font-size:clamp(1.5rem,2.8vw,2rem);margin:10px 0 18px}
+.du-seo-local p{color:#3f596d;line-height:1.65}
+.du-seo-local-photo{margin:0;overflow:hidden;border-radius:15px;min-height:225px;box-shadow:0 10px 24px rgba(16,44,74,.10)}
+.du-seo-local-photo img{width:100%;height:100%;min-height:225px;object-fit:cover;display:block}
+.du-seo-benefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:24px}
+.du-seo-benefits div{padding:16px;background:white;border:1px solid #d8e6f0;border-radius:13px}
+.du-seo-benefits strong,.du-seo-benefits span{display:block}
+.du-seo-benefits strong{color:#102c4a;font-size:.92rem}
+.du-seo-benefits span{color:#51697c;font-size:.86rem;line-height:1.5;margin-top:6px}
+.du-seo-faq{margin:38px 0 16px}
+.du-seo-faq h2{font-size:clamp(1.5rem,2.5vw,2rem)}
+.du-seo-faq details{border:1px solid #d5e4ee;background:#fff;border-radius:12px;margin:10px 0;padding:15px 18px}
+.du-seo-faq summary{cursor:pointer;font-weight:750;color:#173a56}
+.du-seo-faq details p{margin:12px 0 0;color:#4c6376}
+.du-seo-faq a{color:#1268a6;text-decoration:underline;text-underline-offset:2px}
+.du-seo-inline{color:#0c6098;font-weight:750;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:720px){.du-seo-local{padding:22px 17px}.du-seo-local-grid{grid-template-columns:1fr}.du-seo-benefits{grid-template-columns:1fr}.du-seo-local-photo{max-height:250px}}
