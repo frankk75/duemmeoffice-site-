@@ -1,0 +1,88 @@
+/* DUEMME V48 – deterrenti contro la riproduzione dei contenuti.
+   Non è una protezione tecnica assoluta e non limita moduli, link o informativa. */
+.du-protected-site main,
+.du-protected-site header,
+.du-protected-site footer {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+.du-protected-site img,
+.du-protected-site picture,
+.du-protected-site svg {
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+}
+.du-protected-site :is(form, input, textarea, select, label, button),
+.du-protected-site .du-privacy-check,
+.du-protected-site .du-privacy-help {
+  -webkit-user-select: text;
+  user-select: text;
+  -webkit-touch-callout: default;
+}
+.du-protected-site .du-privacy-check {
+  display: grid;
+  grid-template-columns: 21px minmax(0,1fr);
+  align-items: start;
+  gap: 12px;
+  padding: 16px 17px;
+  margin: 20px 0 8px;
+  border: 1px solid #bfd9e9;
+  border-radius: 12px;
+  background: #f2f8fc;
+  color: #173b56;
+  font-size: .91rem;
+  line-height: 1.52;
+}
+.du-protected-site .du-privacy-check input[type="checkbox"] {
+  box-sizing: border-box;
+  width: 19px;
+  height: 19px;
+  margin: 4px 0 0;
+  padding: 0;
+  accent-color: #1470b6;
+  cursor: pointer;
+}
+.du-protected-site .du-privacy-check label {
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  font-weight: 560;
+}
+.du-protected-site .du-privacy-check a {
+  color: #076ea9;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.du-protected-site .du-privacy-check a:hover,
+.du-protected-site .du-privacy-check a:focus-visible {
+  color: #06456e;
+}
+.du-protected-site .du-privacy-help {
+  font-size: .79rem;
+  line-height: 1.5;
+  color: #4a6174;
+  margin: 0 0 18px;
+}
+.du-protected-site .du-privacy-tech { margin-top: 22px; }
+.du-footer-privacy {
+  display: inline-block;
+  font-weight: 650;
+  color: #d5edff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.du-footer-privacy:hover,.du-footer-privacy:focus-visible{color:#fff;}
+.du-privacy-page{background:#f4f8fb;color:#19364e;}
+.du-privacy-page main{padding:38px 0 65px;}
+.du-privacy-page .du-privacy-article{max-width:920px;margin:0 auto;padding:34px clamp(18px,4vw,44px);background:#fff;border:1px solid #dce8f1;border-radius:18px;box-shadow:0 14px 42px rgba(16,44,74,.05);}
+.du-privacy-page h1{font-size:clamp(1.9rem,4vw,2.75rem);margin:12px 0 18px;color:#102c4a;}
+.du-privacy-page h2{font-size:clamp(1.2rem,2.5vw,1.45rem);margin:29px 0 12px;color:#103f64;}
+.du-privacy-page .du-privacy-date{color:#526a7d;font-size:.88rem;}
+.du-privacy-page p,.du-privacy-page li{line-height:1.72;}
+.du-privacy-page ul{padding-left:23px;}
+.du-privacy-page a:not(.du-nav-strip a){color:#076ea9;text-decoration:underline;text-underline-offset:2px;}
+.du-privacy-page footer a{color:#d5edff!important;}
+@media(max-width:620px){.du-privacy-page main{padding:18px 0 42px}.du-privacy-page .du-privacy-article{padding:23px 17px;border-radius:12px}.du-protected-site .du-privacy-check{padding:13px;gap:10px}}
