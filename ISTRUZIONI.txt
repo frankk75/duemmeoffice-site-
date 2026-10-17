@@ -1,11 +1,1 @@
-DUEMME V22 - SEO fotocopiatrici e multifunzioni Siracusa
-
-Aggiornamento da caricare su GitHub:
-- Nella root del repository: index.html, stampanti-multifunzione.html, sitemap.xml
-- Dentro la cartella esistente assets: style.css
-
-Non creare nuove cartelle. Non sovrascrivere altri file.
-Dopo il deploy, in Google Search Console > Controllo URL inserire:
-https://www.duemmeoffice.it/stampanti-multifunzione.html
-e richiedere l'indicizzazione; in Sitemap controllare che sitemap.xml risulti letta.
-Il ranking nei risultati Google non è garantito.
+V24 DUEMME: sostituire le 5 pagine HTML nella root, assets/style.css e assets/catalogo.js nella cartella assets. Non creare cartelle. I cataloghi multifunzioni/registratori usano il file JSON esistente e sono gestibili dall’area riservata. Le altre pagine presentano griglie di categorie, non modelli inventati. I link fonte ufficiale sono rimossi soltanto dalla visualizzazione pubblica, rimangono memorizzati nei dati.
