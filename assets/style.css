@@ -430,17 +430,17 @@ html{scroll-padding-top:210px}
 @media(max-width:360px){.du-header-inner{gap:8px}.du-header-brand{width:86px}.du-header-brand img{width:76px}.du-header-contacts a strong{font-size:9.5px}.du-nav-row{width:calc(100% - 16px)}.du-top-v39 .du-nav-strip a{font-size:9.6px!important;padding:13px 2px!important}}
 @media(prefers-reduced-motion:reduce){.du-top-v39 .du-nav-strip a:after{transition:none}}
 
-/* DUEMME V40 — photographic hero and icon services strip (approved layout) */
-.du-hero-v40{isolation:isolate;background:#102c4a;min-height:610px;position:relative;overflow:hidden}
-.du-hero-v40::before{content:"";position:absolute;inset:0 0 0 auto;width:60%;background-image:url('duemme-hero-ufficio.webp');background-position:center 52%;background-size:cover;background-repeat:no-repeat;z-index:-2;pointer-events:none}
-.du-hero-v40::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#102c4a 0%,#123d60 37%,rgba(16,44,74,.88) 50%,rgba(16,44,74,.13) 83%,rgba(16,44,74,.06) 100%);z-index:-1;pointer-events:none}
-.du-hero-v40 .du-hero-v40-inner{display:flex;align-items:center;min-height:610px;padding-top:86px;padding-bottom:82px}
-.du-hero-v40 .du-hero-copy{max-width:610px;position:relative;z-index:1}
-.du-hero-v40 h1{font-size:clamp(2.15rem,3.85vw,3.9rem)!important;line-height:1.13;letter-spacing:-.038em;margin:0 0 25px;max-width:670px;color:white;text-wrap:balance}
-.du-hero-v40 .du-hero-copy>p{font-size:clamp(1rem,1.36vw,1.18rem);line-height:1.68;color:#edf6fb;max-width:565px}
-.du-hero-v40 .du-actions{margin:30px 0 0;gap:16px}
-.du-hero-v40 .du-btn-primary{background:linear-gradient(180deg,#21b2f2,#0785cf);color:#fff;border-color:#57c6f5;box-shadow:0 9px 22px rgba(2,31,57,.26)}
-.du-hero-v40 .du-btn-outline{background:rgba(10,33,57,.32);border:2px solid rgba(255,255,255,.86)}
+/* DUEMME V42 — hero full width come anteprima approvata */
+.du-hero-v40{position:relative;overflow:hidden;isolation:isolate;background:#102c4a;min-height:clamp(560px,70vh,760px)}
+.du-hero-v40::before{content:"";position:absolute;inset:0;background-image:url('duemme-hero-ufficio.webp');background-position:right center;background-size:cover;background-repeat:no-repeat;z-index:0;pointer-events:none}
+.du-hero-v40::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(16,44,74,.94) 0%,rgba(16,44,74,.90) 32%,rgba(16,44,74,.64) 50%,rgba(16,44,74,.20) 72%,rgba(16,44,74,.08) 100%);z-index:1;pointer-events:none}
+.du-hero-v40 .du-hero-v40-inner{position:relative;z-index:2;display:flex;align-items:center;min-height:clamp(560px,70vh,760px);padding:64px 0 70px}
+.du-hero-v40 .du-hero-copy{max-width:620px;position:relative;z-index:2}
+.du-hero-v40 h1{font-size:clamp(2.2rem,4.1vw,4.15rem)!important;line-height:1.1;letter-spacing:-.04em;margin:0 0 24px;max-width:690px;color:#fff;text-wrap:balance}
+.du-hero-v40 .du-hero-copy>p{font-size:clamp(1.02rem,1.32vw,1.2rem);line-height:1.62;color:#edf6fb;max-width:600px;margin:0}
+.du-hero-v40 .du-actions{margin:34px 0 0;gap:18px}
+.du-hero-v40 .du-btn-primary{background:linear-gradient(180deg,#20b1f1,#0886d0);color:#fff;border-color:#58c7f5;box-shadow:0 10px 24px rgba(2,31,57,.28)}
+.du-hero-v40 .du-btn-outline{background:rgba(10,33,57,.18);border:2px solid rgba(255,255,255,.85);backdrop-filter:blur(2px)}
 .du-hero-services{background:#fff;padding:32px 0 36px;border-bottom:1px solid #e0eaf1}
 .du-hero-services-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
 .du-hero-service{display:flex;align-items:center;flex-direction:column;gap:8px;padding:0 17px;text-align:center;color:#173956;text-decoration:none;min-width:0}
@@ -450,93 +450,7 @@ html{scroll-padding-top:210px}
 .du-hero-service strong{font-size:clamp(.84rem,1.1vw,1.06rem);line-height:1.3;color:#123854}
 .du-hero-service>span:last-child{font-size:clamp(.78rem,1vw,.99rem);line-height:1.5;color:#58718b;max-width:230px}
 .du-hero-service:hover .du-hero-service-icon,.du-hero-service:focus-visible .du-hero-service-icon{transform:translateY(-4px);background:#dbf0fc}
-@media(max-width:780px){.du-hero-v40{min-height:540px}.du-hero-v40 .du-hero-v40-inner{min-height:540px;padding-top:65px;padding-bottom:65px}.du-hero-v40::before{width:80%;opacity:.62}.du-hero-v40::after{background:linear-gradient(90deg,#102c4a 0%,rgba(16,44,74,.97) 35%,rgba(16,44,74,.55) 100%)}.du-hero-v40 .du-hero-copy{max-width:590px}.du-hero-services-grid{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:28px}.du-hero-service:nth-child(3){border-left:0}}
-@media(max-width:520px){.du-hero-v40 .du-hero-v40-inner{min-height:520px;padding-top:46px;padding-bottom:47px}.du-hero-v40::before{width:100%;background-position:center 40%;opacity:.36}.du-hero-v40::after{background:linear-gradient(90deg,rgba(16,44,74,.97),rgba(16,44,74,.80))}.du-hero-v40 h1{font-size:clamp(1.85rem,7.1vw,2.5rem)!important}.du-hero-v40 h1 br{display:none}.du-hero-v40 .du-hero-copy>p{font-size:.98rem}.du-hero-v40 .du-actions{gap:10px}.du-hero-v40 .du-actions a{flex:1 1 170px;text-align:center}.du-hero-services{padding:28px 0}.du-hero-service{padding:0 8px}.du-hero-service-icon{width:66px;height:66px}.du-hero-service-icon svg{width:33px;height:33px}}
-@media(prefers-reduced-motion:reduce){.du-hero-service-icon{transition:none}}
-
-
-/* V41 - Responsive corrections for the approved V40 layout.
-   Scope to the V39 header and V40 homepage. */
-html{scroll-behavior:smooth} html,body{max-width:100%;overflow-x:clip}
-.du-top-v39,.du-hero-v40,.du-hero-services{box-sizing:border-box}
-.du-top-v39 .du-header-inner,.du-top-v39 .du-nav-row,.du-hero-v40 .du-hero-v40-inner{box-sizing:border-box}
-.du-top-v39 .du-header-contacts{max-width:100%;min-width:0}
-.du-top-v39 .du-header-contacts a{min-width:0;overflow-wrap:anywhere}
-.du-top-v39 .du-header-contacts a strong{overflow-wrap:anywhere;word-break:normal}
-.du-hero-v40 .du-hero-v40-inner{width:calc(100% - 48px);max-width:1240px;margin-inline:auto}
-.du-hero-v40 .du-hero-copy{width:100%;max-width:min(55%,680px)}
-.du-hero-v40 h1{max-width:100%;font-size:clamp(2rem,3.7vw,3.75rem)!important;line-height:1.12;overflow-wrap:normal}
-.du-hero-v40 .du-hero-copy>p{max-width:630px;font-size:clamp(.99rem,1.18vw,1.2rem);line-height:1.62}
-.du-hero-v40 .du-actions{display:flex;flex-wrap:wrap;align-items:stretch}
-.du-hero-v40 .du-actions a{min-width:0;white-space:normal}
-.du-hero-v40::before{width:64%;background-position:center right}
-.du-hero-v40::after{background:linear-gradient(90deg,#102c4a 0%,#133d62 30%,rgba(16,44,74,.88) 47%,rgba(16,44,74,.17) 83%,rgba(16,44,74,.04) 100%)}
-.du-hero-services-grid{gap:0}.du-hero-service{box-sizing:border-box}
-.du-hero-service strong,.du-hero-service>span:last-child{overflow-wrap:normal;hyphens:auto}
-@media(min-width:1600px){
- .container{max-width:min(1380px,88vw)}
- .du-hero-v40 .du-hero-v40-inner{max-width:min(1380px,88vw);min-height:clamp(600px,42vw,790px);padding-block:clamp(78px,6vw,125px)}
- .du-hero-v40{min-height:0}
- .du-hero-v40 h1{font-size:clamp(3.3rem,3.6vw,4.75rem)!important}
- .du-hero-v40 .du-hero-copy{max-width:58%}
- .du-hero-v40::before{background-position:center 55%}
-}
-@media(min-width:1050px) and (max-width:1250px){
- .du-hero-v40 .du-hero-copy{max-width:57%}
- .du-hero-v40 h1{font-size:clamp(2.25rem,3.8vw,3.1rem)!important}
- .du-hero-v40::before{width:66%}
-}
-@media(min-width:681px) and (max-width:1049px){
- .du-top-v39 .du-header-inner{padding-block:10px;gap:20px}
- .du-hero-v40 .du-hero-v40-inner{min-height:540px;padding-block:58px}
- .du-hero-v40 .du-hero-copy{max-width:70%}
- .du-hero-v40 h1{font-size:clamp(2.2rem,4.8vw,3rem)!important}
- .du-hero-v40::before{width:82%;opacity:.67}
- .du-hero-v40::after{background:linear-gradient(90deg,#102c4a 0%,rgba(16,44,74,.96) 40%,rgba(16,44,74,.60) 75%,rgba(16,44,74,.20))}
-}
-@media(max-width:680px){
- .container{width:calc(100% - 32px)}
- .du-top-v39 .du-header-inner{width:calc(100% - 28px);min-height:0;padding:12px 0;gap:12px;align-items:center}
- .du-top-v39 .du-header-brand{width:100px;flex:0 0 100px;padding-right:10px}
- .du-top-v39 .du-header-brand img{width:88px;height:auto;max-height:76px}
- .du-top-v39 .du-header-contacts{display:grid;gap:4px;flex:1;max-width:calc(100% - 112px)}
- .du-top-v39 .du-header-contacts a{align-items:flex-start;gap:5px;font-size:clamp(9px,2.6vw,11.5px);line-height:1.23}
- .du-top-v39 .du-header-contacts a>span:first-child{flex:0 0 15px;font-size:14px;width:15px;line-height:1.2}
- .du-top-v39 .du-header-contacts a strong{font-size:inherit;line-height:1.23;overflow-wrap:anywhere}
- .du-top-v39 .du-header-contacts a small{font-size:inherit}
- .du-top-v39 .du-nav-strip{overflow-x:auto!important;overscroll-behavior-x:contain;scrollbar-width:none;-webkit-overflow-scrolling:touch}
- .du-top-v39 .du-nav-strip::-webkit-scrollbar{display:none}
- .du-top-v39 .du-nav-row{width:calc(100% - 20px);max-width:100%;margin-inline:auto;display:flex;justify-content:space-between;align-items:stretch;gap:2px;min-height:48px}
- .du-top-v39 .du-nav-strip a{flex:0 0 auto;font-size:clamp(10px,2.7vw,12.5px)!important;padding:13px 3px!important;line-height:1.2}
- .du-hero-v40{min-height:0}
- .du-hero-v40 .du-hero-v40-inner{width:calc(100% - 36px);min-height:0;padding-block:clamp(42px,9vw,70px)}
- .du-hero-v40 .du-hero-copy{max-width:100%}
- .du-hero-v40::before{width:100%;opacity:.42;background-position:64% center}
- .du-hero-v40::after{background:linear-gradient(90deg,rgba(16,44,74,.96),rgba(16,44,74,.77)),linear-gradient(180deg,rgba(16,44,74,.08),#102c4a)}
- .du-hero-v40 h1{font-size:clamp(1.85rem,7vw,2.65rem)!important;line-height:1.14;margin-bottom:18px;text-wrap:pretty}
- .du-hero-v40 h1 br{display:none}
- .du-hero-v40 .du-hero-copy>p{font-size:clamp(.94rem,3.5vw,1.06rem);line-height:1.63;margin:0}
- .du-hero-v40 .du-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:24px}
- .du-hero-v40 .du-actions a{width:100%;font-size:clamp(.85rem,3.25vw,1rem);min-height:50px;padding:11px 10px;box-sizing:border-box;gap:7px}
- .du-hero-services{padding:22px 0 24px}
- .du-hero-services-grid{width:calc(100% - 24px);grid-template-columns:repeat(2,minmax(0,1fr));gap:0}
- .du-hero-service{padding:16px 10px;gap:6px}
- .du-hero-service:nth-child(2n+1){border-left:none}
- .du-hero-service:nth-child(n+3){border-top:1px solid #e0e8f0}
- .du-hero-service-icon{width:62px;height:62px;margin-bottom:5px}
- .du-hero-service-icon svg{width:31px;height:31px}
- .du-hero-service strong{font-size:clamp(.81rem,3vw,.98rem)}
- .du-hero-service>span:last-child{font-size:clamp(.76rem,2.7vw,.89rem);line-height:1.4}
-}
-@media(max-width:380px){
- .du-top-v39 .du-header-inner{width:calc(100% - 20px);gap:8px}
- .du-top-v39 .du-header-brand{width:82px;flex-basis:82px;padding-right:7px}
- .du-top-v39 .du-header-brand img{width:74px}
- .du-top-v39 .du-header-contacts{max-width:calc(100% - 90px)}
- .du-top-v39 .du-header-contacts a{font-size:9px;gap:3px}
- .du-top-v39 .du-header-contacts a>span:first-child{font-size:12px;width:12px;flex-basis:12px}
- .du-top-v39 .du-nav-row{min-width:332px}
- .du-hero-v40 .du-actions{grid-template-columns:1fr}
- .du-hero-v40 .du-actions a{min-height:46px}
-}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media(max-width:980px){.du-hero-v40,.du-hero-v40 .du-hero-v40-inner{min-height:620px}.du-hero-v40::before{background-position:72% center}.du-hero-v40::after{background:linear-gradient(90deg,rgba(16,44,74,.95) 0%,rgba(16,44,74,.92) 42%,rgba(16,44,74,.60) 67%,rgba(16,44,74,.18) 100%)}.du-hero-v40 .du-hero-copy{max-width:560px}}
+@media(max-width:780px){.du-hero-v40,.du-hero-v40 .du-hero-v40-inner{min-height:560px}.du-hero-v40 .du-hero-v40-inner{padding:54px 0 58px}.du-hero-v40::before{background-position:68% center}.du-hero-v40::after{background:linear-gradient(90deg,rgba(16,44,74,.96) 0%,rgba(16,44,74,.90) 52%,rgba(16,44,74,.48) 100%)}.du-hero-services-grid{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:28px}.du-hero-service:nth-child(3){border-left:0}}
+@media(max-width:520px){.du-hero-v40,.du-hero-v40 .du-hero-v40-inner{min-height:auto}.du-hero-v40 .du-hero-v40-inner{padding:42px 0 46px}.du-hero-v40::before{background-position:70% center}.du-hero-v40::after{background:linear-gradient(180deg,rgba(16,44,74,.90) 0%,rgba(16,44,74,.84) 50%,rgba(16,44,74,.88) 100%)}.du-hero-v40 h1{font-size:clamp(1.95rem,9vw,2.65rem)!important;line-height:1.08}.du-hero-v40 h1 br{display:none}.du-hero-v40 .du-hero-copy>p{font-size:1rem;line-height:1.58}.du-hero-v40 .du-actions{gap:12px}.du-hero-v40 .du-actions a{flex:1 1 100%;text-align:center}.du-hero-services{padding:28px 0}.du-hero-service{padding:0 8px}.du-hero-service-icon{width:66px;height:66px}.du-hero-service-icon svg{width:33px;height:33px}}
+@media(prefers-reduced-motion:reduce){.du-hero-service-icon{transition:none}.du-hero-v40 .du-btn-outline{backdrop-filter:none}}
