@@ -1,3 +1,1 @@
-Sostituisci soltanto index.html nella cartella principale del repository DUEMME.
-Il pulsante assistenza appare sotto la sezione fotografica in una fascia dedicata.
-Gli altri file V29 (assistenza-tecnica.html, assets/style.css, assets/assistenza-form.js) rimangono necessari e non vengono modificati.
+V39 – Intestazione DUEMME stile Ecotek. Caricare nelle cartelle esistenti i 7 HTML e assets/style.css e assets/main.js. Nessuna nuova cartella; non sostituire catalogo, foto o altri file.
