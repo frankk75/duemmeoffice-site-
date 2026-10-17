@@ -1,1 +1,1 @@
-DUEMME V25 - pagine servizi essenziali. Sostituire le 5 pagine HTML nella root e assets/style.css. NON modificare catalogo.js, data, homepage o immagini. Nessuna nuova cartella.
+V29 – DUEMME: caricare index.html e assistenza-tecnica.html nella root; sostituire assets/style.css e aggiungere assets/assistenza-form.js. Nessuna cartella nuova. Il modulo usa mailto: nessun invio automatico dai server GitHub Pages.
