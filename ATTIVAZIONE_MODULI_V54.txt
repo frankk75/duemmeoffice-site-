@@ -1,0 +1,20 @@
+DUEMME V54 – INVIO DIRETTO DEI MODULI
+
+DESTINAZIONE: amministrazione@duemmeoffice.it
+SERVIZIO: FormSubmit.co, HTTPS, senza necessità di app email sul telefono.
+
+1. Caricare i file contenuti nello ZIP nelle rispettive posizioni di GitHub Pages, senza creare cartelle aggiuntive.
+2. Aprire https://www.duemmeoffice.it/ e inviare UNA richiesta di prova dal modulo preventivi con recapiti reali di prova.
+3. FormSubmit invia a amministrazione@duemmeoffice.it un'email di ATTIVAZIONE. Aprirla e cliccare sul link di conferma. Controllare anche Spam/Indesiderata.
+4. Ripetere il test dal modulo https://www.duemmeoffice.it/assistenza-tecnica.html e verificare la ricezione: potrebbe essere necessaria una conferma anche per quel percorso.
+5. Assicurarsi che entrambe le email arrivino e contengano tutti i campi; controllare Spam/Indesiderata e impostare le regole della casella.
+6. Prima di usare il servizio con dati reali di clienti, verificare il trattamento dei dati da parte del fornitore (DPA art. 28 GDPR, localizzazione/trasferimenti, tempi di conservazione e configurazione antispam). L'informativa privacy pubblicata indica FormSubmit, ma da sola non certifica la conformità aziendale.
+
+IMPORTANTI LIMITI: finché la casella non è confermata, non garantire il recapito delle richieste!
+L'invio HTTPS richiede la disponibilità del fornitore esterno. Non sono state inviate prove reali da questa preparazione offline.
+
+DOCUMENTAZIONE
+https://formsubmit.co/
+https://formsubmit.co/documentation
+https://formsubmit.co/ajax-documentation
+https://formsubmit.co/privacy.pdf
