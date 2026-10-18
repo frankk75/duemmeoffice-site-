@@ -1,1 +1,4 @@
-V29 – DUEMME: caricare index.html e assistenza-tecnica.html nella root; sostituire assets/style.css e aggiungere assets/assistenza-form.js. Nessuna cartella nuova. Il modulo usa mailto: nessun invio automatico dai server GitHub Pages.
+DUEMME V51 - Aggiunta P. IVA 01492870892 nel footer di tutte le pagine.
+Sostituire nella root GitHub SOLO i file HTML contenuti in questo pacchetto (inclusa privacy.html).
+Non modificare assets, CSS, immagini, JS o file del catalogo.
+Mantiene titolo SEO V50 e modifiche privacy V48.
