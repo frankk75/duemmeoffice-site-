@@ -52,6 +52,35 @@ function initCompactHeader(){
 }
 initCompactHeader();
 
+/* DUEMME V62 — illustrazioni nella parte libera della testata (solo desktop). */
+function initHeaderIllustrations(){
+  if(!document.querySelector('.du-top-v39 .du-header-upper') || document.getElementById('du-v62-header-art'))return;
+  const style=document.createElement('style');
+  style.id='du-v62-header-art';
+  style.textContent=`
+    @media (min-width:1120px){
+      .du-top-v39 .du-header-upper{position:relative;isolation:isolate}
+      .du-top-v39 .du-header-upper::after{
+        content:'';position:absolute;right:0;top:0;bottom:0;
+        width:min(39vw,680px);pointer-events:none;z-index:0;
+        background-image:url('assets/duemme-header-illustrazioni.webp');
+        background-repeat:no-repeat;background-position:right center;background-size:contain;
+        opacity:.98
+      }
+      .du-top-v39 .du-header-inner{position:relative;z-index:1}
+      .du-top-v39 .du-header-contacts{max-width:590px}
+    }
+    @media(max-width:1119px){.du-top-v39 .du-header-upper::after{content:none!important}}
+    @media(min-width:1120px) and (max-width:1280px){
+      .du-top-v39 .du-header-upper::after{width:32vw;opacity:.85}
+    }
+    .du-top-v39.du-header-compact .du-header-upper::after{opacity:0}
+  `;
+  document.head.appendChild(style);
+}
+initHeaderIllustrations();
+
+
 const year=document.getElementById('year');if(year)year.textContent=String(new Date().getFullYear());
 let scheduled=false;const sectionIds=['home','servizi','marchi','come-funziona','territorio','ecotek','azienda','assistenza','contatti'];
 function updateNav(){scheduled=false;document.body.classList.toggle('is-scrolled',window.scrollY>15);if(!nav)return;let active='home';const offset=window.scrollY+Math.min(225,window.innerHeight*.32);sectionIds.forEach(id=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top+window.scrollY<=offset)active=id});const hrefs={'come-funziona':'#servizi','marchi':'#servizi','territorio':'#servizi','ecotek':'#servizi'};nav.querySelectorAll('a[href^="#"]').forEach(a=>{const on=a.getAttribute('href')===(hrefs[active]||'#'+active);a.classList.toggle('is-active',on);if(on)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')})}
