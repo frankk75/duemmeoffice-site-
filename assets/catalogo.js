@@ -1,4 +1,4 @@
-/* DUEMME V67 – Catalogo Olivetti a gruppi, schede espandibili e JSON gestibile da Pages CMS. */
+/* DUEMME V67 – Catalogo DUEMME a gruppi Olivetti e Ricoh, schede espandibili e JSON gestibile da Pages CMS. */
 (()=>{'use strict';
 const assetUrl = value => {
   if(typeof value!=='string'||!value.trim())return '';
@@ -17,7 +17,8 @@ const types=[
  {id:'a4-bn',label:'MFP A4 B/N',detail:'Multifunzioni A4 in bianco e nero'},
  {id:'a4-colore',label:'MFP A4 Colore',detail:'Multifunzioni A4 a colori'},
  {id:'a3-bn',label:'MFP A3 B/N',detail:'Multifunzioni A3 in bianco e nero'},
- {id:'a3-colore',label:'MFP A3 Colore',detail:'Multifunzioni A3 a colori'}
+ {id:'a3-colore',label:'MFP A3 Colore',detail:'Multifunzioni A3 a colori'},
+ {id:'wide-large-format',label:'Stampanti wide e large format',detail:'Soluzioni professionali per il grande formato'}
 ];
 function askLink(category){const a=node('a','du-model-cta','Richiedi preventivo →');a.href='index.html?esigenza='+encodeURIComponent(category==='registratori'?'Registratori telematici':'Multifunzioni')+'#richiesta';return a}
 function modelCard(p){
