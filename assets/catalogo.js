@@ -1,4 +1,4 @@
-/* DUEMME V67 – Catalogo DUEMME a gruppi Olivetti e Ricoh, schede espandibili e JSON gestibile da Pages CMS. */
+/* DUEMME V70 – Catalogo per marche Olivetti, Ricoh, Canon; categorie apribili e JSON compatibile Pages CMS. */
 (()=>{'use strict';
 const assetUrl = value => {
   if(typeof value!=='string'||!value.trim())return '';
@@ -13,12 +13,19 @@ function photo(p,large=false){
   return wrap;
 }
 function placeholder(){const frag=document.createDocumentFragment();const ico=node('span','du-model-placeholder-icon','▣');ico.setAttribute('aria-hidden','true');frag.appendChild(ico);return frag}
-const types=[
- {id:'a4-bn',label:'MFP A4 B/N',detail:'Multifunzioni A4 in bianco e nero'},
- {id:'a4-colore',label:'MFP A4 Colore',detail:'Multifunzioni A4 a colori'},
- {id:'a3-bn',label:'MFP A3 B/N',detail:'Multifunzioni A3 in bianco e nero'},
- {id:'a3-colore',label:'MFP A3 Colore',detail:'Multifunzioni A3 a colori'},
- {id:'wide-large-format',label:'Stampanti wide e large format',detail:'Soluzioni professionali per il grande formato'}
+const brands=[
+ {brand:'Olivetti',heading:'Olivetti',subtitle:'Fotocopiatrici e multifunzioni per uffici e aziende',groups:[
+  {id:'a4-bn',label:'MFP A4 B/N',detail:'Multifunzioni A4 in bianco e nero'},
+  {id:'a4-colore',label:'MFP A4 Colore',detail:'Multifunzioni A4 a colori'},
+  {id:'a3-bn',label:'MFP A3 B/N',detail:'Multifunzioni A3 in bianco e nero'},
+  {id:'a3-colore',label:'MFP A3 Colore',detail:'Multifunzioni A3 a colori'}
+ ]},
+ {brand:'Ricoh',heading:'Ricoh',subtitle:'Sistemi di stampa e copia professionale in grande formato',groups:[
+  {id:'wide-large-format',label:'Stampanti wide e large format',detail:'Soluzioni B/N per CAD, tavole e documenti tecnici'}
+ ]},
+ {brand:'Canon',heading:'Canon',subtitle:'Plotter imagePROGRAF per CAD, uffici tecnici e grafica',groups:[
+  {id:'canon-plotter',label:'Plotter Canon imagePROGRAF',detail:'Stampa grande formato a colori'}
+ ]}
 ];
 function askLink(category){const a=node('a','du-model-cta','Richiedi preventivo →');a.href='index.html?esigenza='+encodeURIComponent(category==='registratori'?'Registratori telematici':'Multifunzioni')+'#richiesta';return a}
 function modelCard(p){
@@ -46,19 +53,39 @@ function modelCard(p){
   copy.append(actions);content.append(copy);item.append(content);
   return item;
 }
-function drawOlivetti(grid,items){
-  grid.classList.add('du-olivetti-groups');grid.replaceChildren();
-  types.forEach((type,index)=>{
-    const groupItems=items.filter(p=>p.group===type.id);
-    if(!groupItems.length)return;
-    const group=node('details','du-olivetti-group');if(index===0)group.open=true;
-    const heading=node('summary','du-olivetti-group-heading');
-    const name=node('span','du-olivetti-group-label');name.append(node('strong','',type.label));name.append(node('span','',type.detail));heading.append(name);
-    heading.append(node('span','du-group-count',groupItems.length+' modelli'));
-    const chevron=node('span','du-group-chevron','⌄');chevron.setAttribute('aria-hidden','true');heading.append(chevron);group.append(heading);
-    const list=node('div','du-olivetti-list');groupItems.forEach(p=>list.append(modelCard(p)));group.append(list);
-    grid.append(group);
+function createGroup(type,groupItems,expanded=false){
+  const group=node('details','du-olivetti-group');if(expanded)group.open=true;
+  const heading=node('summary','du-olivetti-group-heading');
+  const name=node('span','du-olivetti-group-label');name.append(node('strong','',type.label));name.append(node('span','',type.detail));heading.append(name);
+  heading.append(node('span','du-group-count',groupItems.length+(groupItems.length===1?' modello':' modelli')));
+  const chevron=node('span','du-group-chevron','⌄');chevron.setAttribute('aria-hidden','true');heading.append(chevron);group.append(heading);
+  const list=node('div','du-olivetti-list');groupItems.forEach(p=>list.append(modelCard(p)));group.append(list);
+  return group;
+}
+function drawBrands(grid,items){
+  grid.classList.add('du-olivetti-groups','du-branded-catalog');grid.replaceChildren();
+  const represented=new Set();
+  brands.forEach(section=>{
+    const sectionItems=items.filter(p=>String(p.brand||'').toLowerCase()===section.brand.toLowerCase());
+    if(!sectionItems.length)return;
+    const brandSection=node('section','du-brand-section du-brand-section--'+section.brand.toLowerCase());
+    const header=node('div','du-brand-heading');
+    const title=node('div','du-brand-title');title.append(node('h3','',section.heading));title.append(node('p','',section.subtitle));header.append(title);
+    header.append(node('span','du-brand-count',sectionItems.length+(sectionItems.length===1?' modello':' modelli')));
+    brandSection.append(header);
+    let first=true;
+    section.groups.forEach(type=>{
+      const groupItems=sectionItems.filter(p=>p.group===type.id);
+      if(!groupItems.length)return;
+      groupItems.forEach(p=>represented.add(p));
+      brandSection.append(createGroup(type,groupItems,first));first=false;
+    });
+    const extra=sectionItems.filter(p=>!represented.has(p));
+    if(extra.length){extra.forEach(p=>represented.add(p));brandSection.append(createGroup({id:'other',label:'Altri modelli '+section.heading,detail:'Ulteriori soluzioni disponibili'},extra,first))}
+    grid.append(brandSection);
   });
+  const others=items.filter(p=>!represented.has(p));
+  if(others.length){const brandSection=node('section','du-brand-section');const header=node('div','du-brand-heading');const title=node('div','du-brand-title');title.append(node('h3','','Altre marche'));title.append(node('p','','Altri sistemi professionali'));header.append(title);brandSection.append(header);brandSection.append(createGroup({id:'other',label:'Altri modelli',detail:'Schede prodotto disponibili'},others,true));grid.append(brandSection)}
   if(!grid.children.length)grid.append(node('p','lead','Al momento non ci sono modelli pubblicati.'));
 }
 // Invariato il comportamento dei registratori telematici.
@@ -75,7 +102,7 @@ function init(data){
   const entries=Array.isArray(data.items)?data.items.filter(p=>p&&p.active!==false):[];
   document.querySelectorAll('.product-grid[data-category]').forEach(grid=>{
     const rows=entries.filter(p=>p.category===grid.dataset.category);
-    if(grid.dataset.category==='multifunzioni')drawOlivetti(grid,rows);
+    if(grid.dataset.category==='multifunzioni')drawBrands(grid,rows);
     else {grid.replaceChildren();if(rows.length)rows.forEach(p=>grid.append(registrarCard(p)));else grid.append(node('p','lead','Catalogo temporaneamente vuoto.'))}
   });
 }

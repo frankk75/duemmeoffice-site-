@@ -42,3 +42,19 @@
 @media(max-width:760px){.du-olivetti-list{grid-template-columns:1fr;padding:12px}.du-model-summary{min-height:78px;padding:10px}.du-model-photo{width:55px;height:55px}.du-group-count{font-size:.72rem}}
 @media(max-width:380px){.du-olivetti-group-heading{gap:8px;padding:14px 12px}.du-model-details-copy{min-width:0}.du-group-count{padding:5px 7px}.du-model-cta{width:100%}}
 @media(prefers-reduced-motion:reduce){.du-group-chevron,.du-model-chevron{transition:none}}
+
+
+/* DUEMME V70 — marche distinte: Olivetti / Ricoh / Canon */
+.du-olivetti-page .du-service-catalog .du-branded-catalog{display:flex!important;flex-direction:column!important;gap:30px!important}
+.du-brand-section{display:flex;flex-direction:column;gap:12px;min-width:0;width:100%;margin:0}
+.du-brand-heading{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:19px clamp(18px,3vw,29px);background:linear-gradient(110deg,#0c3558,#166e9b);border-radius:16px;color:#fff;box-shadow:0 9px 24px rgba(15,56,85,.11)}
+.du-brand-title{min-width:0}
+.du-brand-heading h3{color:#fff;font-size:clamp(1.35rem,2.3vw,1.85rem);line-height:1.2;margin:0 0 4px;font-weight:850}
+.du-brand-heading p{color:#dfedf8;margin:0;font-size:clamp(.84rem,1.4vw,1rem);line-height:1.45}
+.du-brand-count{display:inline-flex;flex:none;white-space:nowrap;padding:7px 12px;border:1px solid #ffffff59;background:#ffffff25;border-radius:999px;font-weight:800;font-size:.82rem}
+.du-brand-section--ricoh .du-brand-heading{background:linear-gradient(110deg,#0d4266,#217da6)}
+.du-brand-section--canon .du-brand-heading{background:linear-gradient(110deg,#0c345b,#205e99)}
+.du-brand-section>.du-olivetti-group{margin:0}
+.du-brand-section .du-olivetti-list{width:100%}
+@media(max-width:520px){.du-brand-heading{padding:17px;align-items:flex-start}.du-brand-count{font-size:.7rem;padding:5px 8px}.du-brand-heading p{font-size:.81rem}}
+@media(max-width:360px){.du-brand-heading{gap:8px}.du-brand-count{font-size:.66rem;padding:5px 6px}}
