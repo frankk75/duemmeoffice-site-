@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "items": [
     {
       "id": "oli-a4-bn-d-copia-4523mf",
@@ -674,33 +674,6 @@
       "source": "",
       "price": "",
       "kind": "catalogo",
-      "active": true
-    },
-    {
-      "name": "Registratore telematico touch",
-      "brand": "DUEMME",
-      "type": "Per negozi e punti vendita",
-      "description": "Registratore telematico con interfaccia touch per attività commerciali e retail.",
-      "category": "registratori",
-      "image": "assets/hero-registratore-duemme.webp",
-      "active": true
-    },
-    {
-      "name": "Sistema cassa modulare",
-      "brand": "DUEMME",
-      "type": "Touchscreen e accessori",
-      "description": "Soluzione configurabile con stampante, display cliente e accessori per il punto vendita.",
-      "category": "registratori",
-      "image": "assets/hero-registratore-duemme.webp",
-      "active": true
-    },
-    {
-      "name": "Sistema cassa all-in-one",
-      "brand": "DUEMME",
-      "type": "POS e collegamento RT",
-      "description": "Possibilità di integrazione con POS e supporto per le esigenze operative del negozio.",
-      "category": "registratori",
-      "image": "assets/hero-registratore-duemme.webp",
       "active": true
     }
   ]
