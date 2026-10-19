@@ -483,3 +483,48 @@ html{scroll-padding-top:210px}
 /* Pagina privacy: il CSS GDPR assegna ai link del footer un colore chiaro; preserva il contrasto sul pulsante Google bianco. */
 .du-privacy-page footer a.du-google-social{color:#143b61!important;text-decoration:none!important}
 .du-privacy-page footer a.du-google-social:hover{color:#0f5584!important}
+
+/* DUEMME V65 — rifiniture responsive trasversali, mobile/tablet/desktop */
+html,body{max-width:100%}
+img,svg,video,canvas{max-width:100%}
+img{height:auto}
+main,section,article,.container,.detail-copy,.du-about-grid,.du-card-grid,.du-contact-grid{min-width:0}
+h1,h2,h3,p,li,blockquote{overflow-wrap:break-word}
+.du-header-contacts,.du-header-contacts a,.foot,.foot a,.du-contact-info{min-width:0;overflow-wrap:anywhere}
+input,select,textarea,button{max-width:100%}
+.du-form,.du-tech-form,.du-tech-fields,.du-form-buttons{min-width:0}
+.du-form input:not([type="checkbox"]),.du-form select,.du-form textarea,.du-tech-form input:not([type="checkbox"]),.du-tech-form select,.du-tech-form textarea{max-width:100%;min-width:0}
+.du-solution-grid,.du-card-grid,.du-rental-grid,.product-grid,.du-service-catalog .product-grid{min-width:0}
+.du-card,.du-solution-card,.du-rental-card,.prod{min-width:0}
+.du-service-catalog img,.du-card img,.du-highlight-visual img,.du-rental-visual img{max-width:100%;height:auto}
+@media(max-width:1024px){
+  .du-header-inner{max-width:100%;}
+  .du-header-contacts a strong{overflow-wrap:anywhere}
+  .du-nav-row{gap:clamp(6px,2vw,28px)}
+  .foot{align-items:flex-start}
+}
+@media(max-width:680px){
+  .du-header-inner{width:calc(100% - 24px);gap:10px}
+  .du-header-contacts{flex:1 1 auto;min-width:0}
+  .du-header-contacts a{min-width:0;overflow-wrap:anywhere}
+  .du-header-contacts a strong{word-break:normal;overflow-wrap:anywhere}
+  .du-top-v39 .du-nav-strip .du-nav-row{width:calc(100% - 16px);gap:1px}
+  .du-top-v39 .du-nav-strip .du-nav-row>a{min-width:0}
+  .du-card-grid,.du-solution-grid,.du-rental-grid{min-width:0}
+  .du-form-buttons{display:flex;flex-wrap:wrap;gap:10px}
+  .du-form-buttons button,.du-tech-form-footer button{max-width:100%;white-space:normal}
+  .du-google-social{max-width:100%}
+}
+@media(max-width:380px){
+  .du-header-brand{width:90px;padding-right:7px;flex-shrink:0}
+  .du-header-brand img{width:82px;max-height:78px}
+  .du-header-inner{gap:7px}
+  .du-header-contacts a{gap:4px}
+  .du-header-contacts a strong{font-size:9.3px}
+  .du-top-v39 .du-nav-strip .du-nav-row>a{font-size:clamp(9px,2.35vw,10px)!important;padding:12px 1px!important}
+  .du-top-v39 .du-nav-strip .du-nav-row{min-height:43px}
+  .du-hero-v40 h1{font-size:clamp(1.7rem,8.3vw,2.25rem)!important;line-height:1.12}
+}
+@media(min-width:1920px){
+  .du-top-v39 .du-header-inner,.du-top-v39 .du-nav-row{max-width:1300px}
+}
