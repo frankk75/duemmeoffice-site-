@@ -23,8 +23,11 @@ function initCompactHeader(){
   phone.setAttribute('aria-label','Chiama DUEMME al numero 0931 759890');
   row.appendChild(phone);
   const css=`
-    .du-top-v39 .du-header-upper{max-height:260px;overflow:hidden;transition:max-height .26s ease,opacity .22s ease;opacity:1}
-    .du-top-v39.du-header-compact .du-header-upper{max-height:0;opacity:0;visibility:hidden}
+    /* V66: header fisso, spazio documentale costante. Evita il feedback scroll/altezza. */
+    .du-top-v39{position:fixed!important;top:0!important;left:0;right:0;width:100%;z-index:120}
+    .du-header-space-v66{display:block;width:100%;height:var(--du-header-full-height,180px);pointer-events:none}
+    .du-top-v39 .du-header-upper{max-height:none;overflow:hidden;transition:none!important;opacity:1}
+    .du-top-v39.du-header-compact .du-header-upper{height:0;max-height:0;opacity:0;visibility:hidden;padding:0;border:0}
     .du-top-v39 .du-nav-row .du-compact-brand,.du-top-v39 .du-nav-row .du-compact-phone{display:none!important}
     .du-top-v39.du-header-compact .du-nav-strip{box-shadow:0 5px 18px #0e35521c!important}
     .du-top-v39.du-header-compact .du-nav-row{display:flex;align-items:center;justify-content:space-between;gap:clamp(6px,1.3vw,22px);min-height:66px;max-width:1160px;margin:0 auto}
@@ -46,9 +49,31 @@ function initCompactHeader(){
     @media(prefers-reduced-motion:reduce){.du-top-v39 .du-header-upper{transition:none}}
   `;
   const style=document.createElement('style');style.id='du-v57-header-compact';style.textContent=css;document.head.appendChild(style);
+  /* Lo spacer mantiene stabile il flusso della pagina anche quando l'header si restringe. */
+  const spacer=document.createElement('div');
+  spacer.className='du-header-space-v66';
+  spacer.setAttribute('aria-hidden','true');
+  header.insertAdjacentElement('afterend',spacer);
+  const setSpace=()=>{
+    if(header.classList.contains('du-header-compact'))return;
+    spacer.style.height=Math.ceil(header.getBoundingClientRect().height)+'px';
+  };
+  setSpace();
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(setSpace).catch(()=>{});}
   let last=null;
-  function sync(){const compact=window.scrollY>95;if(compact===last)return;last=compact;header.classList.toggle('du-header-compact',compact);document.documentElement.classList.toggle('du-header-is-compact',compact)}
-  window.addEventListener('scroll',sync,{passive:true});sync();
+  function sync(){
+    const y=window.scrollY;
+    /* Due soglie separate per evitare cambi continui al primo piccolo scroll. */
+    const compact=(last===true)?y>75:y>145;
+    if(compact===last)return;
+    last=compact;
+    header.classList.toggle('du-header-compact',compact);
+    document.documentElement.classList.toggle('du-header-is-compact',compact);
+    if(!compact)setSpace();
+  }
+  window.addEventListener('scroll',sync,{passive:true});
+  window.addEventListener('resize',()=>{if(!header.classList.contains('du-header-compact'))setSpace();},{passive:true});
+  sync();
 }
 initCompactHeader();
 
