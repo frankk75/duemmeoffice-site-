@@ -52,28 +52,32 @@ function initCompactHeader(){
 }
 initCompactHeader();
 
-/* DUEMME V62 — illustrazioni nella parte libera della testata (solo desktop). */
+/* DUEMME V64 — illustrazioni visibili su desktop e tablet, senza coprire i recapiti. */
 function initHeaderIllustrations(){
-  if(!document.querySelector('.du-top-v39 .du-header-upper') || document.getElementById('du-v62-header-art'))return;
+  const upper=document.querySelector('.du-top-v39 .du-header-upper');
+  if(!upper || document.getElementById('du-v64-header-art'))return;
   const style=document.createElement('style');
-  style.id='du-v62-header-art';
+  style.id='du-v64-header-art';
   style.textContent=`
-    @media (min-width:1120px){
-      .du-top-v39 .du-header-upper{position:relative;isolation:isolate}
+    .du-top-v39 .du-header-upper{position:relative;isolation:isolate}
+    .du-top-v39 .du-header-upper::after{content:none}
+    @media (min-width:720px){
       .du-top-v39 .du-header-upper::after{
         content:'';position:absolute;right:0;top:0;bottom:0;
-        width:min(39vw,680px);pointer-events:none;z-index:0;
-        background-image:url('assets/duemme-header-illustrazioni.webp');
+        width:clamp(300px,45vw,660px);pointer-events:none;z-index:0;
+        background-image:url('assets/duemme-header-illustrazioni.webp?v=64');
         background-repeat:no-repeat;background-position:right center;background-size:contain;
-        opacity:.98
+        opacity:.94;
+        -webkit-mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.7) 24%,#000 43%);
+        mask-image:linear-gradient(to right,transparent 0%,rgba(0,0,0,.7) 24%,#000 43%);
       }
       .du-top-v39 .du-header-inner{position:relative;z-index:1}
-      .du-top-v39 .du-header-contacts{max-width:590px}
+      .du-top-v39 .du-header-contacts{position:relative;z-index:2;max-width:580px}
     }
-    @media(max-width:1119px){.du-top-v39 .du-header-upper::after{content:none!important}}
-    @media(min-width:1120px) and (max-width:1280px){
-      .du-top-v39 .du-header-upper::after{width:32vw;opacity:.85}
+    @media (min-width:720px) and (max-width:1080px){
+      .du-top-v39 .du-header-upper::after{width:36vw;min-width:260px;opacity:.7}
     }
+    @media (max-width:719px){.du-top-v39 .du-header-upper::after{content:none!important}}
     .du-top-v39.du-header-compact .du-header-upper::after{opacity:0}
   `;
   document.head.appendChild(style);
