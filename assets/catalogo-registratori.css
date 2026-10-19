@@ -1,0 +1,34 @@
+/* DUEMME V72 — Catalogo RT a fisarmonica per marca, coerente con il catalogo macchine. */
+.du-registratori-page .du-service-catalog .product-grid.du-registratori-groups{
+  display:flex!important;flex-direction:column!important;gap:16px!important;min-width:0;max-width:100%;width:100%;
+}
+.du-rt-brand{min-width:0;width:100%;overflow:hidden;border:1px solid #d3e3ed;border-radius:17px;background:#fff;box-shadow:0 9px 24px rgba(15,56,85,.07)}
+.du-rt-brand>summary{display:flex;align-items:center;gap:16px;min-height:98px;padding:20px clamp(18px,3vw,28px);cursor:pointer;list-style:none;background:linear-gradient(110deg,#0c3558,#166e9b);color:#fff;}
+.du-rt-brand>summary::-webkit-details-marker{display:none}
+.du-rt-brand--axon>summary{background:linear-gradient(110deg,#11385a,#24729c)}
+.du-rt-brand--custom>summary{background:linear-gradient(110deg,#124366,#187fad)}
+.du-rt-brand>summary:hover{filter:brightness(1.055)}
+.du-rt-brand>summary:focus-visible{outline:3px solid #83cafa;outline-offset:-5px}
+.du-rt-brand-title{display:flex;flex:1;min-width:0;flex-direction:column;gap:5px}
+.du-rt-brand-title strong{color:#fff;font-size:clamp(1.27rem,2.4vw,1.8rem);line-height:1.2;font-weight:850}
+.du-rt-brand-title span{font-size:clamp(.82rem,1.4vw,.98rem);color:#e0eff8;line-height:1.45}
+.du-rt-brand-count{flex:none;white-space:normal;max-width:180px;text-align:center;padding:7px 10px;border:1px solid #ffffff59;background:#ffffff25;border-radius:999px;color:#fff;font-size:.77rem;font-weight:750}
+.du-rt-chevron{flex:none;color:#fff;font-size:1.6rem;line-height:1;transition:transform .18s ease}
+.du-rt-brand[open]>summary .du-rt-chevron{transform:rotate(180deg)}
+.du-rt-brand-content{background:linear-gradient(180deg,#f7fbfe,#fff);border-top:1px solid #d8e6ef}
+.du-rt-brand-empty{padding:clamp(20px,3vw,30px);color:#4b6173;line-height:1.65}
+.du-rt-brand-empty p{margin:0 0 16px}
+.du-rt-brand-content .du-olivetti-list{padding:18px}
+.du-registratori-page .du-service-catalog .du-model-card{min-width:0}
+@media(max-width:680px){
+  .du-rt-brand>summary{padding:17px 15px;gap:9px;min-height:87px}
+  .du-rt-brand-count{max-width:116px;padding:5px 7px;font-size:.7rem}
+  .du-rt-brand-content .du-olivetti-list{padding:12px;grid-template-columns:1fr}
+}
+@media(max-width:380px){
+  .du-rt-brand-title strong{font-size:1.21rem}
+  .du-rt-brand-title span{font-size:.76rem}
+  .du-rt-brand-count{max-width:90px;font-size:.65rem}
+  .du-rt-chevron{font-size:1.3rem}
+}
+@media(prefers-reduced-motion:reduce){.du-rt-chevron{transition:none}}

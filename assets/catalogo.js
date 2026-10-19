@@ -1,4 +1,4 @@
-/* DUEMME V70 – Catalogo per marche Olivetti, Ricoh, Canon; categorie apribili e JSON compatibile Pages CMS. */
+/* DUEMME V72 – Catalogo per marche Olivetti, Ricoh, Canon; categorie apribili e JSON compatibile Pages CMS. */
 (()=>{'use strict';
 const assetUrl = value => {
   if(typeof value!=='string'||!value.trim())return '';
@@ -88,23 +88,56 @@ function drawBrands(grid,items){
   if(others.length){const brandSection=node('section','du-brand-section');const header=node('div','du-brand-heading');const title=node('div','du-brand-title');title.append(node('h3','','Altre marche'));title.append(node('p','','Altri sistemi professionali'));header.append(title);brandSection.append(header);brandSection.append(createGroup({id:'other',label:'Altri modelli',detail:'Schede prodotto disponibili'},others,true));grid.append(brandSection)}
   if(!grid.children.length)grid.append(node('p','lead','Al momento non ci sono modelli pubblicati.'));
 }
-// Invariato il comportamento dei registratori telematici.
-function registrarCard(p){
-  const card=node('article','prod');card.dataset.brand=p.brand||'';
-  const image=node('div','prod-photo');const url=assetUrl(p.image);
-  if(url){const img=node('img');img.src=url;img.loading='lazy';img.alt='Immagine illustrativa: '+(p.name||'Prodotto');img.onerror=()=>{image.textContent='Immagine non disponibile'};image.append(img)}
-  else image.textContent='Immagine non disponibile';card.append(image);
-  const body=node('div','prod-body');body.append(node('span','prod-brand',p.brand||'DUEMME'));body.append(node('h3','',p.name||'Modello'));
-  if(p.type)body.append(node('span','prod-type',p.type));if(p.description)body.append(node('p','',p.description));
-  if(p.price)body.append(node('strong','',p.price));const links=node('div','prod-links');const a=node('a','btn','Richiedi preventivo →');a.href='index.html?esigenza=Registratori%20telematici#richiesta';links.append(a);body.append(links);card.append(body);return card;
+// DUEMME V72 — Catalogo registratori: tre fisarmoniche per marca, aggiornabili da JSON/Pages CMS.
+const rtBrands = [
+  {name:'Olivetti',slug:'olivetti',detail:'Registratori telematici Olivetti'},
+  {name:'Axon',slug:'axon',detail:'Registratori telematici Axon'},
+  {name:'Custom',slug:'custom',detail:'Registratori telematici Custom'}
+];
+function makeRegistrarAccordion(def,rows){
+  const group=node('details','du-rt-brand du-rt-brand--'+def.slug);
+  const summary=node('summary','du-rt-brand-heading');
+  const title=node('span','du-rt-brand-title');
+  title.append(node('strong','',def.name));
+  title.append(node('span','',def.detail));
+  summary.append(title);
+  summary.append(node('span','du-rt-brand-count',rows.length?(rows.length+(rows.length===1?' modello':' modelli')):'Schede in preparazione'));
+  const chev=node('span','du-rt-chevron','⌄');chev.setAttribute('aria-hidden','true');summary.append(chev);
+  group.append(summary);
+  const content=node('div','du-rt-brand-content');
+  if(rows.length){
+    const list=node('div','du-olivetti-list du-rt-model-grid');
+    rows.forEach(product=>list.append(modelCard(product)));
+    content.append(list);
+  }else{
+    const message=node('div','du-rt-brand-empty');
+    message.append(node('p','', 'Le schede dei registratori '+def.name+' saranno disponibili prossimamente. Per modelli, configurazioni e assistenza puoi già contattare DUEMME.'));
+    message.append(askLink('registratori'));
+    content.append(message);
+  }
+  group.append(content);
+  return group;
+}
+function drawRegistratori(grid,items){
+  grid.classList.add('du-olivetti-groups','du-registratori-groups');
+  grid.replaceChildren();
+  const shown=new Set();
+  rtBrands.forEach(def=>{
+    const rows=items.filter(p=>String(p.brand||'').trim().toLowerCase()===def.name.toLowerCase());
+    rows.forEach(p=>shown.add(p));
+    grid.append(makeRegistrarAccordion(def,rows));
+  });
+  // Do not silently lose additional brands inserted later through the CMS.
+  const extra=items.filter(p=>!shown.has(p));
+  if(extra.length)grid.append(makeRegistrarAccordion({name:'Altri marchi',slug:'altri',detail:'Ulteriori registratori telematici'},extra));
 }
 function init(data){
   const entries=Array.isArray(data.items)?data.items.filter(p=>p&&p.active!==false):[];
   document.querySelectorAll('.product-grid[data-category]').forEach(grid=>{
     const rows=entries.filter(p=>p.category===grid.dataset.category);
     if(grid.dataset.category==='multifunzioni')drawBrands(grid,rows);
-    else {grid.replaceChildren();if(rows.length)rows.forEach(p=>grid.append(registrarCard(p)));else grid.append(node('p','lead','Catalogo temporaneamente vuoto.'))}
+    else if(grid.dataset.category==='registratori')drawRegistratori(grid,rows)
   });
 }
-fetch('assets/data/catalogo.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(init).catch(()=>{document.querySelectorAll('.product-grid').forEach(grid=>{grid.replaceChildren(node('p','lead','Catalogo temporaneamente non disponibile. Riprova più tardi.'))})});
+fetch('assets/data/catalogo.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(init).catch(()=>{document.querySelectorAll('.product-grid').forEach(grid=>{if(grid.dataset.category==='registratori')drawRegistratori(grid,[]);else grid.replaceChildren(node('p','lead','Catalogo temporaneamente non disponibile. Riprova più tardi.'))})});
 })();
