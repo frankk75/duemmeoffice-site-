@@ -2,6 +2,56 @@
 (()=>{'use strict';
 const menu=document.getElementById('menu'),nav=document.getElementById('links');
 if(menu&&nav){const close=()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'};menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});}
+
+/* DUEMME V57 — testata compatta durante lo scorrimento, comune a tutte le pagine. */
+function initCompactHeader(){
+  const header=document.querySelector('.du-top-v39');
+  const row=header&&header.querySelector('.du-nav-row');
+  const brand=header&&header.querySelector('.du-header-brand');
+  if(!header||!row||!brand||row.querySelector('.du-compact-brand'))return;
+  const compactBrand=document.createElement('a');
+  compactBrand.className='du-compact-brand';
+  compactBrand.href='index.html';
+  compactBrand.setAttribute('aria-label','DUEMME S.r.l. — Torna alla homepage');
+  const image=brand.querySelector('img');
+  if(image){const mini=image.cloneNode(true);mini.removeAttribute('width');mini.removeAttribute('height');mini.alt='DUEMME S.r.l.';compactBrand.appendChild(mini)}
+  row.prepend(compactBrand);
+  const phone=document.createElement('a');
+  phone.className='du-compact-phone';
+  phone.href='tel:+390931759890';
+  phone.textContent='☎ 0931 759890';
+  phone.setAttribute('aria-label','Chiama DUEMME al numero 0931 759890');
+  row.appendChild(phone);
+  const css=`
+    .du-top-v39 .du-header-upper{max-height:260px;overflow:hidden;transition:max-height .26s ease,opacity .22s ease;opacity:1}
+    .du-top-v39.du-header-compact .du-header-upper{max-height:0;opacity:0;visibility:hidden}
+    .du-top-v39 .du-nav-row .du-compact-brand,.du-top-v39 .du-nav-row .du-compact-phone{display:none!important}
+    .du-top-v39.du-header-compact .du-nav-strip{box-shadow:0 5px 18px #0e35521c!important}
+    .du-top-v39.du-header-compact .du-nav-row{display:flex;align-items:center;justify-content:space-between;gap:clamp(6px,1.3vw,22px);min-height:66px;max-width:1160px;margin:0 auto}
+    .du-top-v39.du-header-compact .du-nav-row .du-compact-brand{display:flex!important;flex:none;align-items:center;justify-content:center;padding:3px 0!important;margin-right:auto;line-height:1!important;max-width:110px}
+    .du-top-v39.du-header-compact .du-nav-row .du-compact-brand img{display:block;width:108px;max-width:100%;max-height:56px;object-fit:contain}
+    .du-top-v39.du-header-compact .du-nav-row .du-compact-brand::after,.du-top-v39.du-header-compact .du-nav-row .du-compact-phone::after{display:none!important;content:none!important}
+    .du-top-v39.du-header-compact .du-nav-row .du-compact-phone{display:flex!important;flex:none;white-space:nowrap;font-size:12px!important;font-weight:750!important;color:#125b8e;padding:8px 2px!important;margin-left:auto}
+    .du-top-v39.du-header-compact .du-nav-strip .du-nav-row>a:not(.du-compact-brand):not(.du-compact-phone){font-size:clamp(12px,1.1vw,15px)!important;padding:17px 2px!important}
+    html.du-header-is-compact{scroll-padding-top:86px}
+    @media(max-width:1050px){.du-top-v39.du-header-compact .du-nav-row .du-compact-phone{display:none!important}.du-top-v39.du-header-compact .du-nav-row{gap:clamp(3px,1vw,15px)}}
+    @media(max-width:680px){
+      .du-top-v39.du-header-compact .du-nav-row{min-height:54px;width:calc(100% - 20px);gap:1px;justify-content:space-between}
+      .du-top-v39.du-header-compact .du-nav-row .du-compact-brand{max-width:57px;margin-right:2px;padding:2px 0!important}
+      .du-top-v39.du-header-compact .du-nav-row .du-compact-brand img{width:56px;max-height:45px}
+      .du-top-v39.du-header-compact .du-nav-strip .du-nav-row>a:not(.du-compact-brand):not(.du-compact-phone){font-size:clamp(9px,2.2vw,11px)!important;letter-spacing:-.025em;padding:15px 1px!important}
+      html.du-header-is-compact{scroll-padding-top:70px}
+    }
+    @media(max-width:360px){.du-top-v39.du-header-compact .du-nav-row .du-compact-brand{max-width:48px}.du-top-v39.du-header-compact .du-nav-row .du-compact-brand img{width:47px}.du-top-v39.du-header-compact .du-nav-strip .du-nav-row>a:not(.du-compact-brand):not(.du-compact-phone){font-size:8.8px!important}}
+    @media(prefers-reduced-motion:reduce){.du-top-v39 .du-header-upper{transition:none}}
+  `;
+  const style=document.createElement('style');style.id='du-v57-header-compact';style.textContent=css;document.head.appendChild(style);
+  let last=null;
+  function sync(){const compact=window.scrollY>95;if(compact===last)return;last=compact;header.classList.toggle('du-header-compact',compact);document.documentElement.classList.toggle('du-header-is-compact',compact)}
+  window.addEventListener('scroll',sync,{passive:true});sync();
+}
+initCompactHeader();
+
 const year=document.getElementById('year');if(year)year.textContent=String(new Date().getFullYear());
 let scheduled=false;const sectionIds=['home','servizi','marchi','come-funziona','territorio','ecotek','azienda','assistenza','contatti'];
 function updateNav(){scheduled=false;document.body.classList.toggle('is-scrolled',window.scrollY>15);if(!nav)return;let active='home';const offset=window.scrollY+Math.min(225,window.innerHeight*.32);sectionIds.forEach(id=>{const el=document.getElementById(id);if(el&&el.getBoundingClientRect().top+window.scrollY<=offset)active=id});const hrefs={'come-funziona':'#servizi','marchi':'#servizi','territorio':'#servizi','ecotek':'#servizi'};nav.querySelectorAll('a[href^="#"]').forEach(a=>{const on=a.getAttribute('href')===(hrefs[active]||'#'+active);a.classList.toggle('is-active',on);if(on)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')})}
