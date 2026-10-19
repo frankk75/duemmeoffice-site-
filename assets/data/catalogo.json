@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "items": [
     {
       "id": "oli-a4-bn-d-copia-4523mf",
@@ -596,6 +596,21 @@
       "description": "Multifunzione Olivetti formato A3, colore. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
       "specs": "",
       "image": "",
+      "source": "",
+      "price": "",
+      "kind": "catalogo",
+      "active": true
+    },
+    {
+      "id": "ricoh-wide-mp-w7100sp",
+      "name": "MP W7100SP",
+      "brand": "Ricoh",
+      "category": "multifunzioni",
+      "group": "wide-large-format",
+      "type": "Stampante multifunzione B/N · Wide e Large Format",
+      "description": "La Ricoh MP W7100SP è una multifunzione monocromatica per la stampa e la copia di documenti in grande formato. Progettata per le esigenze di studi tecnici e ambienti CAD, unisce affidabilità operativa, semplicità d’uso e gestione efficiente dei documenti di grande dimensione.",
+      "specs": "Configurazione: console\nTecnologia di copiatura e stampa: elettrofotografica\nAlimentazione carta standard: 2 alimentatori a rotolo\nAlimentazione carta opzionale: 2 alimentatori a rotolo e 2 cassetti carta da 250 fogli ciascuno\nRisoluzione: 600 × 600 dpi\nScala di grigi: 2 livelli\nZoom: dal 25% al 400%, con incrementi dello 0,1%\nMetodo di taglio: formato preimpostato, sincronizzato o variabile\nDisco fisso: 320 GB",
+      "image": "assets/ricoh-mp-w7100sp.webp",
       "source": "",
       "price": "",
       "kind": "catalogo",
