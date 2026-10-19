@@ -1,0 +1,44 @@
+/* DUEMME V67 – Catalogo Olivetti responsive, indipendente dal CSS generale. */
+.du-olivetti-page .du-service-catalog .product-grid.du-olivetti-groups{
+  display:flex!important;flex-direction:column;gap:14px;max-width:100%;min-width:0;
+}
+.du-olivetti-groups summary{list-style:none;cursor:pointer}
+.du-olivetti-groups summary::-webkit-details-marker{display:none}
+.du-olivetti-group{border:1px solid #d6e5f0;border-radius:18px;background:#fff;overflow:hidden;box-shadow:0 8px 24px rgba(15,54,88,.055)}
+.du-olivetti-group-heading{display:flex;align-items:center;gap:14px;min-height:78px;padding:17px clamp(16px,2.5vw,28px);background:linear-gradient(115deg,#f6fafd,#fff);color:#103454}
+.du-olivetti-group[open]>.du-olivetti-group-heading{border-bottom:1px solid #e0ebf3}
+.du-olivetti-group-label{display:flex;flex:1;flex-direction:column;gap:3px;min-width:0}
+.du-olivetti-group-label strong{font-size:clamp(1.07rem,1.8vw,1.37rem);color:#0c3d70}
+.du-olivetti-group-label span{font-size:.86rem;color:#556b80}
+.du-group-count{display:inline-flex;border:1px solid #cee1ef;background:#eaf4fb;padding:6px 10px;border-radius:999px;font-size:.79rem;font-weight:800;color:#125b8e;white-space:nowrap}
+.du-group-chevron,.du-model-chevron{color:#1d6494;font-size:1.5rem;line-height:1;transition:transform .15s ease;flex:none}
+.du-olivetti-group[open]>.du-olivetti-group-heading .du-group-chevron,.du-model-card[open]>.du-model-summary .du-model-chevron{transform:rotate(180deg)}
+.du-olivetti-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:18px}
+.du-olivetti-page .du-service-catalog .du-model-card{min-width:0;border:1px solid #dfebf3;border-radius:13px;overflow:hidden;background:#fff;box-shadow:none}
+.du-model-card[open]{border-color:#a9cfe5!important;box-shadow:0 8px 22px rgba(16,54,84,.07)!important}
+.du-model-summary{display:flex;align-items:center;gap:12px;padding:12px 14px;min-height:90px}
+.du-model-summary:hover{background:#f7fbfe}
+.du-olivetti-groups summary:focus-visible{outline:3px solid #3d90ca;outline-offset:-3px}
+.du-model-photo{display:flex;align-items:center;justify-content:center;flex:none;width:64px;height:64px;border-radius:11px;background:linear-gradient(140deg,#eaf3fa,#f7fbff);border:1px solid #deebf4;overflow:hidden}
+.du-model-photo img{width:100%;height:100%;object-fit:contain;padding:4px}
+.du-model-placeholder-icon{font-size:2rem;font-weight:600;color:#5f9cc5;line-height:1}
+.du-model-info{min-width:0;flex:1;display:flex;flex-direction:column;gap:5px}
+.du-model-name{font-size:1rem;color:#143d5d;line-height:1.35;overflow-wrap:anywhere}
+.du-model-sub{font-size:.79rem;color:#6b7d8b}
+.du-model-details{border-top:1px solid #e5eff6;padding:17px;background:#f9fcff;display:flex;flex-wrap:wrap;gap:16px}
+.du-model-fullphoto{width:190px;max-width:100%}
+.du-model-photo--large{width:190px;height:164px;border-radius:12px}
+.du-model-details-copy{flex:1;min-width:200px;color:#435c71;font-size:.91rem;line-height:1.63}
+.du-model-details-copy p{margin:11px 0;color:#435c71}
+.du-model-details-copy h4{font-size:.95rem;color:#123e5d;margin:12px 0 6px}
+.du-model-type{display:inline-block;background:#e8f2fa;border-radius:8px;color:#14679b;padding:4px 9px;font-size:.82rem;font-weight:800}
+.du-model-specs{padding-left:20px;margin:0 0 12px}
+.du-model-specs li{margin:3px 0;overflow-wrap:anywhere}
+.du-model-price{display:block;color:#103a56;margin:10px 0}
+.du-model-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+.du-model-cta{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:9px;background:#126aa6;color:#fff!important;text-decoration:none!important;font-size:.85rem;font-weight:800;line-height:1.25;text-align:center}
+.du-model-cta:hover,.du-model-cta:focus-visible{background:#0c527f}
+.du-model-source{color:#145b8e!important;font-size:.82rem;font-weight:750;overflow-wrap:anywhere}
+@media(max-width:760px){.du-olivetti-list{grid-template-columns:1fr;padding:12px}.du-model-summary{min-height:78px;padding:10px}.du-model-photo{width:55px;height:55px}.du-group-count{font-size:.72rem}}
+@media(max-width:380px){.du-olivetti-group-heading{gap:8px;padding:14px 12px}.du-model-details-copy{min-width:0}.du-group-count{padding:5px 7px}.du-model-cta{width:100%}}
+@media(prefers-reduced-motion:reduce){.du-group-chevron,.du-model-chevron{transition:none}}
