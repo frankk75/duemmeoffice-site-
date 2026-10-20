@@ -110,6 +110,17 @@ function makeRegistrarAccordion(def,rows){
   const chev=node('span','du-rt-chevron','⌄');chev.setAttribute('aria-hidden','true');summary.append(chev);
   group.append(summary);
   const content=node('div','du-rt-brand-content');
+  if(def.slug==='axon'){
+    const feature=node('div','du-axon-software-promo');
+    const copy=node('div','du-axon-software-promo-copy');
+    copy.append(node('span','du-axon-software-kicker','SOFTWARE PER IL PUNTO VENDITA'));
+    copy.append(node('strong','du-axon-software-title','Wycash PRO'));
+    copy.append(node('span','du-axon-software-description','Gestione vendite, ristorazione, fidelity, pagamenti e servizi cloud.'));
+    const link=node('a','du-axon-software-link','Scopri il software Wycash PRO →');
+    link.href='wycash-pro.html';
+    feature.append(copy,link);
+    content.append(feature);
+  }
   if(rows.length){
     const list=node('div','du-olivetti-list du-rt-model-grid');
     content.append(list);
