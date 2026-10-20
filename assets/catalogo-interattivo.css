@@ -6,3 +6,22 @@
 .du-v87-dialog img{display:block;max-width:100%;max-height:75vh;object-fit:contain;margin:auto}
 .du-v87-close{position:absolute;top:12px;right:14px;border:1px solid #bfd6e8;background:#f2f8fd;color:#163b5c;padding:7px 12px;border-radius:9px;cursor:pointer}
 @media(prefers-reduced-motion:no-preference){.du-v87-enter .du-model-details{animation:du-v87-show .24s ease-out}@keyframes du-v87-show{from{opacity:.55;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}}
+
+/* V88 — interactive preview, responsive and CMS-driven */
+.du-v88{margin:30px 0 38px;padding:clamp(20px,3vw,34px);border-radius:22px;background:linear-gradient(135deg,#0c1b32,#174b78);color:#f4f9ff;box-shadow:0 14px 36px #10345422}
+.du-v88 *{box-sizing:border-box}.du-v88 h2,.du-v88 h3,.du-v88 h4{color:#fff}.du-v88 h2{margin:4px 0 8px;font-size:clamp(1.5rem,2.5vw,2rem)}.du-v88 h3{margin:4px 0 12px;font-size:clamp(1.35rem,2vw,1.8rem)}
+.du-v88 p{color:#d3e4f3;margin:6px 0 14px}.du-v88-kicker{font-size:.76rem;letter-spacing:.13em;font-weight:800;color:#63e0ea}
+.du-v88-selectors{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0}.du-v88-selectors label{display:flex;flex-direction:column;gap:7px;font-size:.88rem;font-weight:750}
+.du-v88-selectors select{width:100%;min-width:0;border:1px solid #8db3d0;border-radius:10px;background:#fff;color:#183650;padding:12px;font:inherit}
+.du-v88-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:24px;align-items:stretch}
+.du-v88-visual{display:flex;flex-direction:column;gap:12px;padding:17px;border:1px solid #ffffff2c;border-radius:17px;background:radial-gradient(ellipse at 50% 45%,#34658c,#10253f 75%);min-width:0}
+.du-v88-productname{font-size:.8rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#c8e7fb}
+.du-v88-image{height:290px;display:grid;place-items:center;min-width:0}.du-v88-image img{max-width:95%;max-height:275px;object-fit:contain;filter:drop-shadow(0 15px 18px #0007)}
+.du-v88-no-image:after{content:'Fotografia non disponibile';color:#c8e7fb}
+.du-v88-enlarge{align-self:center;border:1px solid #b8dce9;border-radius:999px;background:#eafaff;color:#123b5d;padding:10px 18px;font-weight:800;cursor:pointer}.du-v88-enlarge:disabled{opacity:.5;cursor:not-allowed}
+.du-v88-info{padding:10px 0}.du-v88-type{display:inline-block;color:#71dce7;font-size:.82rem;font-weight:750}.du-v88-info h4{margin:20px 0 8px}
+.du-v88-specs{margin:0 0 22px;padding-left:20px;color:#e0effa;font-size:.92rem;line-height:1.55;max-height:235px;overflow:auto}.du-v88-specs li{margin:0 0 7px}
+.du-v88-cta{display:inline-block;background:#32d1df;color:#06243c!important;border-radius:10px;padding:11px 16px;font-weight:800;text-decoration:none}
+.du-v88-note{font-size:.75rem!important;color:#aecce1!important;margin-top:14px!important}
+@media(max-width:760px){.du-v88-layout{grid-template-columns:1fr}.du-v88-image{height:235px}.du-v88-image img{max-height:225px}}
+@media(max-width:460px){.du-v88-selectors{grid-template-columns:1fr}.du-v88{border-radius:16px}.du-v88-visual{padding:12px}}
