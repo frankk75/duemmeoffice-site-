@@ -3,7 +3,7 @@
 const root=document.querySelector('.du-v88[data-du-v88]');if(!root)return;
 const category=root.dataset.duV88;
 const paths=['catalogo-ufficio-olivetti.json','catalogo-ufficio-ricoh.json','catalogo-ufficio-canon.json','catalogo-registratori-olivetti.json','catalogo-registratori-axon.json','catalogo-registratori-custom.json'];
-const brand=root.querySelector('.du-v88-brand'),model=root.querySelector('.du-v88-model');
+const brand=root.querySelector('.du-v88-brand'),type=root.querySelector('.du-v97-type'),model=root.querySelector('.du-v88-model');
 const img=root.querySelector('.du-v88-image img'),empty=root.querySelector('.du-v95-empty');
 const prev=root.querySelector('.du-v95-prev'),next=root.querySelector('.du-v95-next'),counter=root.querySelector('.du-v95-count'),thumbs=root.querySelector('.du-v95-thumbs');
 const enlarge=root.querySelector('.du-v88-enlarge'),error=root.querySelector('.du-v88-error');
@@ -29,9 +29,14 @@ function show(p){current=p;if(!p)return;
  const q=new URLSearchParams({esigenza:(category==='registratori'?'Registratori telematici':'Multifunzioni')+' - '+p.brand+' '+p.name});
  root.querySelector('.du-v88-cta').href='index.html?'+q.toString()+'#richiesta';
 }
-function models(){const filtered=products.filter(p=>p.brand===brand.value);options(model,filtered.map(p=>({value:p.id||p.name,label:p.name})));show(filtered[0])}
-brand.addEventListener('change',models);
-model.addEventListener('change',()=>show(products.find(p=>p.brand===brand.value&&(p.id||p.name)===model.value)));
+// Tipologie ricavate dal campo 'type' o, in assenza, dal gruppo Pages CMS.
+const groupLabels={'a4-bn':'Multifunzioni A4 B/N','a4-colore':'Multifunzioni A4 colore','a3-bn':'Multifunzioni A3 B/N','a3-colore':'Multifunzioni A3 colore','wide-large-format':'Wide e large format','canon-plotter':'Plotter','olivetti':'Registratori Olivetti','axon':'Registratori Axon','custom':'Registratori Custom'};
+function typeName(p){return String(p.type||groupLabels[p.group]||p.group||(category==='registratori'?'Registratori telematici':'Altre multifunzioni')).trim()}
+function models(){const filtered=products.filter(p=>p.brand===brand.value&&typeName(p)===type.value);options(model,filtered.map(p=>({value:p.id||p.name,label:p.name})));show(filtered[0])}
+function types(){const names=[...new Set(products.filter(p=>p.brand===brand.value).map(typeName))];options(type,names.map(n=>({value:n,label:n})));models()}
+brand.addEventListener('change',types);
+type.addEventListener('change',models);
+model.addEventListener('change',()=>show(products.find(p=>p.brand===brand.value&&typeName(p)===type.value&&(p.id||p.name)===model.value)));
 prev.addEventListener('click',()=>{if(photos.length>1){index=(index+photos.length-1)%photos.length;renderPhoto()}});
 next.addEventListener('click',()=>{if(photos.length>1){index=(index+1)%photos.length;renderPhoto()}});
 enlarge.addEventListener('click',()=>{if(!photos.length)return;
@@ -48,6 +53,6 @@ img.addEventListener('error',()=>{img.hidden=true;empty.hidden=false;enlarge.dis
 Promise.all(paths.map(p=>fetch('assets/data/'+p,{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(p);return r.json()})))
 .then(arr=>arr.flatMap(d=>Array.isArray(d.items)?d.items:[]))
 .catch(()=>fetch('assets/data/catalogo.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('fallback');return r.json()}).then(d=>d.items||[]))
-.then(all=>{products=all.filter(p=>p&&p.active!==false&&p.category===category&&p.brand&&p.name);if(!products.length)throw Error('empty');const brands=[...new Set(products.map(p=>p.brand))];options(brand,brands.map(b=>({value:b,label:b})));models()})
+.then(all=>{products=all.filter(p=>p&&p.active!==false&&p.category===category&&p.brand&&p.name);if(!products.length)throw Error('empty');const brands=[...new Set(products.map(p=>p.brand))];options(brand,brands.map(b=>({value:b,label:b})));types()})
 .catch(()=>{root.querySelector('.du-v88-layout').hidden=true;root.querySelector('.du-v88-selectors').hidden=true;error.hidden=false;error.textContent='Il catalogo non è temporaneamente disponibile. Riprova più tardi oppure contatta DUEMME.'});
 })();

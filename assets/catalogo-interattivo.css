@@ -48,3 +48,17 @@
 .du-v88 :is(button,select,a):focus-visible{outline:3px solid #55d7e8;outline-offset:3px}
 @media(max-width:800px){.du-v88-layout{grid-template-columns:1fr}.du-v88-image{height:clamp(280px,60vw,440px)}}
 @media(max-width:480px){.du-v88{border-radius:18px}.du-v88-image{height:300px}.du-v95-thumb{width:60px;height:52px}}
+
+/* V97: tre filtri e presentazione Wycash PRO */
+.du-v88-selectors{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:760px){.du-v88-selectors{grid-template-columns:1fr}}
+.du-v97-wycash{max-width:1320px;margin:24px auto 44px;padding:clamp(22px,4vw,42px);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(240px,.65fr);align-items:center;gap:clamp(20px,4vw,48px);border:1px solid #d6e8f3;border-radius:24px;background:linear-gradient(125deg,#f2f9fe,#fff);box-shadow:0 12px 34px #0d395c0d}
+.du-v97-wycash-kicker{font-size:.77rem;letter-spacing:.12em;font-weight:800;color:#1376a4}
+.du-v97-wycash h2{font-size:clamp(1.4rem,2.5vw,2rem);color:#143c59;margin:10px 0 14px;line-height:1.25}
+.du-v97-wycash p{font-size:1rem;line-height:1.7;color:#4d6475;margin:0 0 23px}
+.du-v97-wycash-link{display:inline-block;padding:13px 20px;background:#12658e;color:#fff!important;border-radius:12px;font-weight:800;text-decoration:none}
+.du-v97-wycash-link:hover{background:#0d4b6e}
+.du-v97-wycash-media{display:block;padding:18px;border-radius:18px;background:#fff;border:1px solid #e0edf5;text-align:center}
+.du-v97-wycash-media img{display:block;width:100%;height:auto;max-height:310px;object-fit:contain}
+.du-v97-wycash a:focus-visible{outline:3px solid #1e9dbe;outline-offset:4px}
+@media(max-width:760px){.du-v97-wycash{grid-template-columns:1fr}.du-v97-wycash-media{max-width:440px;width:100%;margin:auto}}
