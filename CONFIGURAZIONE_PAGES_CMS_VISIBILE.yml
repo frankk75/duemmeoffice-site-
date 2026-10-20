@@ -1,0 +1,106 @@
+# Configurazione Pages CMS; area di gestione esterna autenticata su app.pagescms.org
+media:
+  input: assets
+  output: /assets
+  rename: safe
+  extensions:
+  - jpg
+  - jpeg
+  - png
+  - webp
+content:
+- name: catalogo_duemme
+  label: Catalogo DUEMME – Olivetti, Ricoh, Canon e registratori
+  type: file
+  path: assets/data/catalogo.json
+  format: json
+  operations:
+    delete: false
+  fields:
+  - name: version
+    label: Versione dati
+    type: number
+    readonly: true
+  - name: items
+    label: Prodotti del catalogo
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{brand} · {name}'
+    fields:
+    - name: id
+      label: Codice interno (lasciare invariato)
+      type: string
+    - name: category
+      label: Sezione del sito
+      type: select
+      required: true
+      options:
+        values:
+        - name: multifunzioni
+          label: Macchine multifunzione
+        - name: registratori
+          label: Registratori telematici
+    - name: group
+      label: Gruppo prodotti (macchine per ufficio e registratori)
+      type: select
+      options:
+        values:
+        - name: a4-bn
+          label: MFP A4 B/N
+        - name: a4-colore
+          label: MFP A4 Colore
+        - name: a3-bn
+          label: MFP A3 B/N
+        - name: a3-colore
+          label: MFP A3 Colore
+        - name: wide-large-format
+          label: Ricoh – Wide e large format
+        - name: canon-plotter
+          label: Canon – Plotter imagePROGRAF
+        - name: olivetti
+          label: Registratori – Olivetti
+        - name: axon
+          label: Registratori – Axon
+        - name: custom
+          label: Registratori – Custom
+    - name: brand
+      label: Marca
+      type: string
+      required: true
+    - name: name
+      label: Nome del modello
+      type: string
+      required: true
+    - name: type
+      label: Tipologia
+      type: string
+    - name: description
+      label: Descrizione prodotto
+      type: text
+    - name: specs
+      label: Caratteristiche tecniche (una per riga)
+      type: text
+      description: Ogni riga viene mostrata come caratteristica nella scheda. Inserire solo dati verificati.
+    - name: image
+      label: Foto prodotto – carica o seleziona
+      type: image
+      description: Caricamento diretto su GitHub nella cartella assets. Preferire foto autorizzate di
+        prodotto.
+    - name: source
+      label: Scheda ufficiale produttore (opzionale)
+      type: string
+    - name: price
+      label: Prezzo o offerta (opzionale)
+      type: string
+    - name: kind
+      label: Tipo scheda
+      type: select
+      options:
+        values:
+        - catalogo
+        - offerta
+    - name: active
+      label: Pubblicato sul sito
+      type: boolean
