@@ -138,5 +138,9 @@ function init(data){
     else if(grid.dataset.category==='registratori')drawRegistratori(grid,rows)
   });
 }
-fetch('assets/data/catalogo.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(init).catch(()=>{document.querySelectorAll('.product-grid').forEach(grid=>{if(grid.dataset.category==='registratori')drawRegistratori(grid,[]);else grid.replaceChildren(node('p','lead','Catalogo temporaneamente non disponibile. Riprova più tardi.'))})});
+const catalogSources=["assets/data/catalogo-ufficio-olivetti.json","assets/data/catalogo-ufficio-ricoh.json","assets/data/catalogo-ufficio-canon.json","assets/data/catalogo-registratori-olivetti.json","assets/data/catalogo-registratori-axon.json","assets/data/catalogo-registratori-custom.json"];
+Promise.all(catalogSources.map(path=>fetch(path,{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status+' '+path);return r.json()})))
+.then(parts=>({items:parts.flatMap(p=>Array.isArray(p.items)?p.items:[])}))
+.catch(()=>fetch('assets/data/catalogo.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()}))
+.then(init).catch(()=>{document.querySelectorAll('.product-grid').forEach(grid=>{if(grid.dataset.category==='registratori')drawRegistratori(grid,[]);else grid.replaceChildren(node('p','lead','Catalogo temporaneamente non disponibile. Riprova più tardi.'))})});
 })();
