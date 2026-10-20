@@ -165,6 +165,8 @@
       "name": "d-Color MF2624",
       "type": "MFP A4 Colore",
       "description": "Multifunzione Olivetti formato A4, colore. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Desktop Full-Color Copier, Printer, Scanner, Fax; Slot SD/SDHC \n26 ppm a colori e in b/n\ndi serie 512 Mb; (max 1.536 Mb)\n600 x 600 dpi\ndi serie A6-A4\nCassetto di serie: 1x250 ff + bypass 50 ff; opzionali: max 1 x 250 ff",
+      "image": "/assets/2624.jpeg",
       "kind": "catalogo",
       "active": true
     },
@@ -176,6 +178,8 @@
       "name": "d-Color MF2624plus",
       "type": "MFP A4 Colore",
       "description": "Multifunzione Olivetti formato A4, colore. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Desktop Full-Color Copier, Printer, Scanner, Fax; Slot SD/SDHC (opz.) \nWireless LAN (solo d-Color MF 2624plus)\n26 ppm a colori e in b/n\ndi serie 512 Mb; (max 1.536 Mb)\n600 x 600 dpi\ndi serie A6-A4\nCassetto di serie: 1x250 ff + bypass 50 ff; opzionali: max 1 x 250 ff",
+      "image": "/assets/2624-1.jpeg",
       "kind": "catalogo",
       "active": true
     },
@@ -187,6 +191,8 @@
       "name": "d-Copia 255MF",
       "type": "MFP A3 B/N",
       "description": "Multifunzione Olivetti formato A3, bianco e nero. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Laser monocromatica\nFino a 25 cpm A4 - 17 cpm A3\ndi serie 1 GB; (max 3GB)\ndi serie A3 - A6R;\ndi serie: 1x500 ff + bypass 100 ff ; opzionali: max 2 x 500 ff\nEmulazioni PCL6 (PCL5c / PCL-XL), KPDL 3 (PS 3 compatibile), XPS e PDF Direct Print\nFast Ethernet 10/100/1000 BaseT di serie, USB 2.0 (High Speed); USB Host\ndi serie\n50 ipm b/n e 50 ipm a colori (A4, 300dpi,simplex) ; 600x600dpi",
+      "image": "/assets/olivdcopia255mfcomb02r14.jpg",
       "kind": "catalogo",
       "active": true
     },
@@ -198,6 +204,8 @@
       "name": "d-Copia 3202MF",
       "type": "MFP A3 B/N",
       "description": "Multifunzione Olivetti formato A3, bianco e nero. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Laser monocromatica\nFino a 32 cpm A4 - 17 cpm A3\ndi serie 4 GB; SSD 32GB ; HD 320 GB oppure 1 TB (opzionale)\ndi serie A3 - A5R\ndi serie: 2x500 ff + bypass 100 ff\nEmulazioni PCL6 (PCL5c / PCL-XL), KPDL 3 (PS 3 compatibile), XPS e PDF Direct Print\nFast Ethernet 10/100/1000 BaseT di serie, USB 2.0 (High Speed); USB Host\n200 ipm b/n e 200 ipm a colori (A4, 300dpi, doppia scansione, con DP-7160-7170) ; 600x600dpi",
+      "image": "/assets/3202front.jpg",
       "kind": "catalogo",
       "active": true
     },
@@ -209,6 +217,8 @@
       "name": "d-Copia 4002MF",
       "type": "MFP A3 B/N",
       "description": "Multifunzione Olivetti formato A3, bianco e nero. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Laser monocromatica\nFino a 40 cpm A4 - 21 cpm A3\ndi serie 4 GB; SSD 32GB ; HD 320 GB oppure 1 TB (opzionale)\ndi serie A3 - A5R\ndi serie: 2x500 ff + bypass 100 ff\nEmulazioni PCL6 (PCL5c / PCL-XL), KPDL 3 (PS 3 compatibile), XPS e PDF Direct Print\nFast Ethernet 10/100/1000 BaseT di serie, USB 2.0 (High Speed); USB Host\n200 ipm b/n e 200 ipm a colori (A4, 300dpi, doppia scansione, con DP-7160-7170) ; 600x600dpi",
+      "image": "/assets/3202front-1.jpg",
       "kind": "catalogo",
       "active": true
     },
@@ -220,6 +230,8 @@
       "name": "d-Copia 5002MF",
       "type": "MFP A3 B/N",
       "description": "Multifunzione Olivetti formato A3, bianco e nero. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Fino a 50 cpm A4 - 25 cpm A3\ndi serie 4 GB; SSD 64GB\nSRA3 - A6R; banner1,200 mm\ndi serie: 2x500 ff + bypass 150 ff\nEmulazioni PCL6 (PCL5c / PCL-XL), KPDL 3 (PS 3 compatibile), PDF Direct Print, XPS Direct Print e Open XPS\nFast Ethernet 10/100/1000 BaseT di serie, USB (Super Speed); USB Host di serie\nFino a 274 ipm A4, 300dpi, doppia scansione, con DP-7160/DP-7170) ; 600x600dpi",
+      "image": "/assets/3202front-2.jpg",
       "kind": "catalogo",
       "active": true
     },
@@ -231,39 +243,8 @@
       "name": "d-Copia 6002MF",
       "type": "MFP A3 B/N",
       "description": "Multifunzione Olivetti formato A3, bianco e nero. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
-      "kind": "catalogo",
-      "active": true
-    },
-    {
-      "id": "oli-a3-bn-d-copia-5003mf",
-      "category": "multifunzioni",
-      "group": "a3-bn",
-      "brand": "Olivetti",
-      "name": "d-Copia 5003MF",
-      "type": "MFP A3 B/N",
-      "description": "Multifunzione Olivetti formato A3, bianco e nero. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
-      "kind": "catalogo",
-      "active": true
-    },
-    {
-      "id": "oli-a3-bn-d-copia-6003mf",
-      "category": "multifunzioni",
-      "group": "a3-bn",
-      "brand": "Olivetti",
-      "name": "d-Copia 6003MF",
-      "type": "MFP A3 B/N",
-      "description": "Multifunzione Olivetti formato A3, bianco e nero. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
-      "kind": "catalogo",
-      "active": true
-    },
-    {
-      "id": "oli-a3-bn-d-copia-7003mf",
-      "category": "multifunzioni",
-      "group": "a3-bn",
-      "brand": "Olivetti",
-      "name": "d-Copia 7003MF",
-      "type": "MFP A3 B/N",
-      "description": "Multifunzione Olivetti formato A3, bianco e nero. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Fino a 60 cpm A4 - 30 cpm A3\ndi serie 4 GB; SSD 64GB\nSRA3 - A6R; banner1,200 mm\ndi serie: 2x500 ff + bypass 150 ff\nEmulazioni PCL6 (PCL5c / PCL-XL), KPDL 3 (PS 3 compatibile), PDF Direct Print, XPS Direct Print e Open XPS\nFast Ethernet 10/100/1000 BaseT di serie, USB (Super Speed); USB Host di serie\nFino a 274 ipm A4, 300dpi, doppia scansione, con DP-7160/DP-7170) ; 600x600dpi",
+      "image": "/assets/3202front-3.jpg",
       "kind": "catalogo",
       "active": true
     },
@@ -275,6 +256,8 @@
       "name": "d-Copia 7002MF",
       "type": "MFP A3 B/N",
       "description": "Multifunzione Olivetti formato A3, bianco e nero. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Laser monocromatica\nFino a 70 / cpm A4 - 35 / cpm A3\ndi serie 4,5 GB; SSD 8GB ; HD 320 GB\ndi serie, a doppia scansione - 270 ff\nSRA3; A6R\ndi serie: 2 x 500 ff + 2 x 1.500 ff + bypass 150 ff\nEmulazioni PCL6 (PCL5c / PCL-XL), KPDL 3 (PS 3 compatibile), XPS e PDF Direct Print, Open XPS\nFast Ethernet 10/100/1000 BaseT di serie, USB 2.0 (High Speed); USB Host\n220 ipm b/n e 220 ipm a colori (A4, 300dpi, doppia scansione) ; 600x600dpi",
+      "image": "/assets/mf8002comb21fgraz2021.jpg",
       "kind": "catalogo",
       "active": true
     },
@@ -286,6 +269,8 @@
       "name": "d-Copia 8002MF",
       "type": "MFP A3 B/N",
       "description": "Multifunzione Olivetti formato A3, bianco e nero. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Laser monocromatica\nFino a 80 / cpm A4 - 40 / cpm A3\ndi serie 4,5 GB; SSD 8GB ; HD 320 GB\ndi serie, a doppia scansione - 270 ff\nSRA3; A6R\ndi serie: 2 x 500 ff + 2 x 1.500 ff + bypass 150 ff\nEmulazioni PCL6 (PCL5c / PCL-XL), KPDL 3 (PS 3 compatibile), XPS e PDF Direct Print, Open XPS\nFast Ethernet 10/100/1000 BaseT di serie, USB 2.0 (High Speed); USB Host\n220 ipm b/n e 220 ipm a colori (A4, 300dpi, doppia scansione); 600x600dpi",
+      "image": "/assets/mf8002comb21fgraz2021-1.jpg",
       "kind": "catalogo",
       "active": true
     },
@@ -297,6 +282,8 @@
       "name": "d-Color MF2556",
       "type": "MFP A3 Colore",
       "description": "Multifunzione Olivetti formato A3, colore. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Desktop Full-Color Copier,Printer,Scanner\n25 ppm a colori e in b/n\ndi serie 4 GB; SSD 32GB ; HD 320 GB oppure 1 TB (opzionale)\nSRA3; A6R; banner\ndi serie: 2 x 500 ff + bypass 150 ff\nEmulazioni PCL6 (PCL5c / PCL-XL), KPDL 3 (PS 3 compatibile), PDF Direct Print, XPS Direct Print e Open XPS\nFast Ethernet Giga bit 10/100/1000 BaseT di serie, USB (Super Speed); USB Host di serie\nFino a 200 ipm (A4, 300dpi, doppia scansione, con DP-7160/DP-7170) ; 600x600dpi",
+      "image": "/assets/d-colormf255610-1.jpg",
       "kind": "catalogo",
       "active": true
     },
@@ -308,94 +295,8 @@
       "name": "d-Color MF3556",
       "type": "MFP A3 Colore",
       "description": "Multifunzione Olivetti formato A3, colore. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
-      "kind": "catalogo",
-      "active": true
-    },
-    {
-      "id": "oli-a3-colore-d-color-mf257",
-      "category": "multifunzioni",
-      "group": "a3-colore",
-      "brand": "Olivetti",
-      "name": "d-Color MF257",
-      "type": "MFP A3 Colore",
-      "description": "Multifunzione Olivetti formato A3, colore. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
-      "kind": "catalogo",
-      "active": true
-    },
-    {
-      "id": "oli-a3-colore-d-color-mf259en",
-      "category": "multifunzioni",
-      "group": "a3-colore",
-      "brand": "Olivetti",
-      "name": "d-Color MF259en",
-      "type": "MFP A3 Colore",
-      "description": "Multifunzione Olivetti formato A3, colore. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
-      "kind": "catalogo",
-      "active": true
-    },
-    {
-      "id": "oli-a3-colore-d-color-mf309en",
-      "category": "multifunzioni",
-      "group": "a3-colore",
-      "brand": "Olivetti",
-      "name": "d-Color MF309en",
-      "type": "MFP A3 Colore",
-      "description": "Multifunzione Olivetti formato A3, colore. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
-      "kind": "catalogo",
-      "active": true
-    },
-    {
-      "id": "oli-a3-colore-d-color-mf369en",
-      "category": "multifunzioni",
-      "group": "a3-colore",
-      "brand": "Olivetti",
-      "name": "d-Color MF369en",
-      "type": "MFP A3 Colore",
-      "description": "Multifunzione Olivetti formato A3, colore. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
-      "kind": "catalogo",
-      "active": true
-    },
-    {
-      "id": "oli-a3-colore-d-color-mf459en",
-      "category": "multifunzioni",
-      "group": "a3-colore",
-      "brand": "Olivetti",
-      "name": "d-Color MF459en",
-      "type": "MFP A3 Colore",
-      "description": "Multifunzione Olivetti formato A3, colore. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
-      "kind": "catalogo",
-      "active": true
-    },
-    {
-      "id": "oli-a3-colore-d-color-mf559en",
-      "category": "multifunzioni",
-      "group": "a3-colore",
-      "brand": "Olivetti",
-      "name": "d-Color MF559en",
-      "type": "MFP A3 Colore",
-      "description": "Multifunzione Olivetti formato A3, colore. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
-      "kind": "catalogo",
-      "active": true
-    },
-    {
-      "id": "oli-a3-colore-d-color-mf659en",
-      "category": "multifunzioni",
-      "group": "a3-colore",
-      "brand": "Olivetti",
-      "name": "d-Color MF659en",
-      "type": "MFP A3 Colore",
-      "description": "Multifunzione Olivetti formato A3, colore. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
-      "kind": "catalogo",
-      "active": true
-    },
-    {
-      "id": "oli-a3-colore-d-color-mf759en",
-      "category": "multifunzioni",
-      "group": "a3-colore",
-      "brand": "Olivetti",
-      "name": "d-Color MF759en",
-      "type": "MFP A3 Colore",
-      "description": "Multifunzione Olivetti formato A3, colore. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Desktop Full-Color Copier,Printer,Scanner\n35 ppm a colori e in b/n\ndi serie 4 GB; SSD 32GB ; HD 320 GB oppure 1 TB (opzionale)\nSRA3; A6R; banner\ndi serie: 2 x 500 ff + bypass 150 ff\nEmulazioni PCL6 (PCL5c / PCL-XL), KPDL 3 (PS 3 compatibile), PDF Direct Print, XPS Direct Print e Open XPS\nFast Ethernet Giga bit 10/100/1000 BaseT di serie, USB (Super Speed); USB Host di serie\nFino a 200 ipm (A4, 300dpi, doppia scansione, con DP-7160/DP-7170) ; 600x600dpi",
+      "image": "/assets/d-colormf255610-2.jpg",
       "kind": "catalogo",
       "active": true
     },
@@ -407,6 +308,8 @@
       "name": "d-Color MF4056",
       "type": "MFP A3 Colore",
       "description": "Multifunzione Olivetti formato A3, colore. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Desktop Full-Color Copier,Printer,Scanner\n40 ppm a colori e in b/n\ndi serie 4 GB; SSD 32GB ; HD 320 GB oppure 1 TB (opzionale)\nSRA3; A6R; banner\ndi serie: 2 x 500 ff + bypass 150 ff\nEmulazioni PCL6 (PCL5c / PCL-XL), KPDL 3 (PS 3 compatibile), PDF Direct Print, XPS Direct Print e Open XPS\nFast Ethernet Giga bit 10/100/1000 BaseT di serie, USB (Super Speed); USB Host di serie\nFino a 200 ipm (A4, 300dpi, doppia scansione, con DP-7160/DP-7170) ; 600x600dpi",
+      "image": "/assets/d-colormf255610-3.jpg",
       "kind": "catalogo",
       "active": true
     },
@@ -418,6 +321,8 @@
       "name": "d-Color MF5056",
       "type": "MFP A3 Colore",
       "description": "Multifunzione Olivetti formato A3, colore. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Desktop Full-Color Copier,Printer,Scanner\n50 ppm a colori e in b/n\ndi serie 4 GB; SSD 32GB ; HD 320 GB oppure 1 TB (opzionale)\nSRA3; A6R; banner\ndi serie: 2 x 500 ff + bypass 150 ff\nEmulazioni PCL6 (PCL5c / PCL-XL), KPDL 3 (PS 3 compatibile), PDF Direct Print, XPS Direct Print e Open XPS\nFast Ethernet Giga bit 10/100/1000 BaseT di serie, USB (Super Speed); USB Host di serie\nFino a 200 ipm (A4, 300dpi, doppia scansione, con DP-7160/DP-7170) ; 600x600dpi",
+      "image": "/assets/d-colormf255610-4.jpg",
       "kind": "catalogo",
       "active": true
     },
@@ -429,6 +334,8 @@
       "name": "d-Color MF6056",
       "type": "MFP A3 Colore",
       "description": "Multifunzione Olivetti formato A3, colore. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Desktop Full-Color Copier,Printer,Scanner\n60 ppm a colori e in b/n\ndi serie 4 GB; SSD 32GB ; HD 320 GB oppure 1 TB (opzionale)\nSRA3; A6R; banner\ndi serie: 2 x 500 ff + bypass 150 ff\nEmulazioni PCL6 (PCL5c / PCL-XL), KPDL 3 (PS 3 compatibile), PDF Direct Print, XPS Direct Print e Open XPS\nFast Ethernet Giga bit 10/100/1000 BaseT di serie, USB (Super Speed); USB Host di serie\nFino a 200 ipm (A4, 300dpi, doppia scansione, con DP-7160/DP-7170) ; 600x600dpi",
+      "image": "/assets/d-colormf255610-5.jpg",
       "kind": "catalogo",
       "active": true
     }
