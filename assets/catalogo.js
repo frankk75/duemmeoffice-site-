@@ -73,19 +73,18 @@ function drawBrands(grid,items){
     const title=node('div','du-brand-title');title.append(node('h3','',section.heading));title.append(node('p','',section.subtitle));header.append(title);
     header.append(node('span','du-brand-count',sectionItems.length+(sectionItems.length===1?' modello':' modelli')));
     brandSection.append(header);
-    let first=true;
     section.groups.forEach(type=>{
       const groupItems=sectionItems.filter(p=>p.group===type.id);
       if(!groupItems.length)return;
       groupItems.forEach(p=>represented.add(p));
-      brandSection.append(createGroup(type,groupItems,first));first=false;
+      brandSection.append(createGroup(type,groupItems,false));
     });
     const extra=sectionItems.filter(p=>!represented.has(p));
-    if(extra.length){extra.forEach(p=>represented.add(p));brandSection.append(createGroup({id:'other',label:'Altri modelli '+section.heading,detail:'Ulteriori soluzioni disponibili'},extra,first))}
+    if(extra.length){extra.forEach(p=>represented.add(p));brandSection.append(createGroup({id:'other',label:'Altri modelli '+section.heading,detail:'Ulteriori soluzioni disponibili'},extra,false))}
     grid.append(brandSection);
   });
   const others=items.filter(p=>!represented.has(p));
-  if(others.length){const brandSection=node('section','du-brand-section');const header=node('div','du-brand-heading');const title=node('div','du-brand-title');title.append(node('h3','','Altre marche'));title.append(node('p','','Altri sistemi professionali'));header.append(title);brandSection.append(header);brandSection.append(createGroup({id:'other',label:'Altri modelli',detail:'Schede prodotto disponibili'},others,true));grid.append(brandSection)}
+  if(others.length){const brandSection=node('section','du-brand-section');const header=node('div','du-brand-heading');const title=node('div','du-brand-title');title.append(node('h3','','Altre marche'));title.append(node('p','','Altri sistemi professionali'));header.append(title);brandSection.append(header);brandSection.append(createGroup({id:'other',label:'Altri modelli',detail:'Schede prodotto disponibili'},others,false));grid.append(brandSection)}
   if(!grid.children.length)grid.append(node('p','lead','Al momento non ci sono modelli pubblicati.'));
 }
 // DUEMME V72 — Catalogo registratori: tre fisarmoniche per marca, aggiornabili da JSON/Pages CMS.
