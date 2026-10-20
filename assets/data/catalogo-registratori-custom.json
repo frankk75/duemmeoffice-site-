@@ -1,4 +1,20 @@
 {
   "version": 5,
-  "items": []
+  "items": [
+    {
+      "id": "custom-q3x-n-rt",
+      "name": "Q3X-N RT",
+      "brand": "Custom",
+      "category": "registratori",
+      "group": "custom",
+      "type": "Stampante fiscale telematica",
+      "description": "Stampante fiscale telematica dal design ricercato, progettata per coniugare velocità, affidabilità e prestazioni. Finiture lucide e dettagli cromati per ambienti commerciali eleganti.",
+      "specs": "Interfacce disponibili: Ethernet, Bluetooth e Wi-Fi\nStampa di coupon grafici ad alta qualità\nConnettività per applicazioni di comunicazione mobile",
+      "image": "/assets/custom-q3x-n-rt.webp",
+      "source": "",
+      "price": "",
+      "kind": "catalogo",
+      "active": true
+    }
+  ]
 }
