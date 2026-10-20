@@ -1,0 +1,9 @@
+/* DUEMME V89: sezione informativa discreta, accessibile, nessuna profilazione */
+.du-v89-context{margin:24px auto 36px;padding:18px 20px;border:1px solid #dbe6ee;border-radius:13px;background:#f8fbfd;max-width:1120px}
+.du-v89-context h2{font-size:clamp(1.1rem,2vw,1.35rem);margin:0 0 9px;color:#153d5e}
+.du-v89-context p{margin:0 0 10px;color:#415b71;font-size:.94rem}
+.du-v89-context a{color:#125f9d;text-decoration:underline;text-underline-offset:3px}
+.du-v89-context details{border-top:1px solid #e0eaf1;padding:10px 0}
+.du-v89-context summary{cursor:pointer;color:#234862;font-weight:650}
+.du-v89-context details p{margin:9px 0 2px}
+.du-v89-context .du-v89-links{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:12px}
