@@ -1,0 +1,5 @@
+DUEMME V84 – Aggiunta canonical SEO alle 4 pagine.
+
+Sostituire nella cartella principale GitHub i soli quattro file HTML contenuti nello ZIP.
+Nessuna modifica a cataloghi, formulari, grafica, sitemap o CMS.
+.pages.yml: INVARIATO.
