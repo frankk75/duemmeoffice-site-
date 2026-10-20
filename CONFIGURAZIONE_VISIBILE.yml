@@ -1,0 +1,134 @@
+# DUEMME V77: sei cataloghi separati per Pages CMS.
+media:
+  input: assets
+  output: /assets
+  rename: safe
+  extensions:
+  - jpg
+  - jpeg
+  - png
+  - webp
+content:
+- name: catalogo_ufficio_olivetti
+  label: Macchine per ufficio · Olivetti
+  type: file
+  path: assets/data/catalogo-ufficio-olivetti.json
+  format: json
+  fields: &id001
+  - name: version
+    label: Versione dati
+    type: number
+    readonly: true
+  - name: items
+    label: Prodotti del catalogo
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{brand} · {name}'
+    fields:
+    - name: id
+      label: Codice interno (lasciare invariato)
+      type: string
+    - name: category
+      label: Sezione del sito
+      type: select
+      required: true
+      options:
+        values:
+        - name: multifunzioni
+          label: Macchine multifunzione
+        - name: registratori
+          label: Registratori telematici
+    - name: group
+      label: Gruppo prodotti (macchine per ufficio e registratori)
+      type: select
+      options:
+        values:
+        - name: a4-bn
+          label: MFP A4 B/N
+        - name: a4-colore
+          label: MFP A4 Colore
+        - name: a3-bn
+          label: MFP A3 B/N
+        - name: a3-colore
+          label: MFP A3 Colore
+        - name: wide-large-format
+          label: Ricoh – Wide e large format
+        - name: canon-plotter
+          label: Canon – Plotter imagePROGRAF
+        - name: olivetti
+          label: Registratori – Olivetti
+        - name: axon
+          label: Registratori – Axon
+        - name: custom
+          label: Registratori – Custom
+    - name: brand
+      label: Marca
+      type: string
+      required: true
+    - name: name
+      label: Nome del modello
+      type: string
+      required: true
+    - name: type
+      label: Tipologia
+      type: string
+    - name: description
+      label: Descrizione prodotto
+      type: text
+    - name: specs
+      label: Caratteristiche tecniche (una per riga)
+      type: text
+      description: Ogni riga viene mostrata come caratteristica nella scheda. Inserire solo dati verificati.
+    - name: image
+      label: Foto prodotto – carica o seleziona
+      type: image
+      description: Caricamento diretto su GitHub nella cartella assets. Preferire foto autorizzate di
+        prodotto.
+    - name: source
+      label: Scheda ufficiale produttore (opzionale)
+      type: string
+    - name: price
+      label: Prezzo o offerta (opzionale)
+      type: string
+    - name: kind
+      label: Tipo scheda
+      type: select
+      options:
+        values:
+        - catalogo
+        - offerta
+    - name: active
+      label: Pubblicato sul sito
+      type: boolean
+- name: catalogo_ufficio_ricoh
+  label: Macchine per ufficio · Ricoh
+  type: file
+  path: assets/data/catalogo-ufficio-ricoh.json
+  format: json
+  fields: *id001
+- name: catalogo_ufficio_canon
+  label: Macchine per ufficio · Canon
+  type: file
+  path: assets/data/catalogo-ufficio-canon.json
+  format: json
+  fields: *id001
+- name: catalogo_registratori_olivetti
+  label: Registratori telematici · Olivetti
+  type: file
+  path: assets/data/catalogo-registratori-olivetti.json
+  format: json
+  fields: *id001
+- name: catalogo_registratori_axon
+  label: Registratori telematici · Axon
+  type: file
+  path: assets/data/catalogo-registratori-axon.json
+  format: json
+  fields: *id001
+- name: catalogo_registratori_custom
+  label: Registratori telematici · Custom
+  type: file
+  path: assets/data/catalogo-registratori-custom.json
+  format: json
+  fields: *id001
