@@ -1,3 +1,4 @@
+/* DUEMME V81: crea le schede soltanto all’apertura delle fisarmoniche. */
 /* DUEMME V72 – Catalogo per marche Olivetti, Ricoh, Canon; categorie apribili e JSON compatibile Pages CMS. */
 (()=>{'use strict';
 const assetUrl = value => {
@@ -39,7 +40,8 @@ function modelCard(p){
   const mark=node('span','du-model-chevron','⌄');mark.setAttribute('aria-hidden','true');summary.append(mark);
   item.append(summary);
   const content=node('div','du-model-details');
-  if(p.image){const larger=node('div','du-model-fullphoto');larger.append(photo(p,true));content.append(larger)}
+  if(p.image){const larger=node('div','du-model-fullphoto');content.append(larger);
+    let fullReady=false;item.addEventListener('toggle',()=>{if(item.open&&!fullReady){fullReady=true;larger.append(photo(p,true))}})}
   const copy=node('div','du-model-details-copy');
   if(p.type)copy.append(node('span','du-model-type',p.type));
   if(p.description)copy.append(node('p','',p.description));
@@ -59,7 +61,11 @@ function createGroup(type,groupItems,expanded=false){
   const name=node('span','du-olivetti-group-label');name.append(node('strong','',type.label));name.append(node('span','',type.detail));heading.append(name);
   heading.append(node('span','du-group-count',groupItems.length+(groupItems.length===1?' modello':' modelli')));
   const chevron=node('span','du-group-chevron','⌄');chevron.setAttribute('aria-hidden','true');heading.append(chevron);group.append(heading);
-  const list=node('div','du-olivetti-list');groupItems.forEach(p=>list.append(modelCard(p)));group.append(list);
+  const list=node('div','du-olivetti-list');group.append(list);
+  let populated=false;
+  function populate(){if(populated||!group.open)return;populated=true;groupItems.forEach(p=>list.append(modelCard(p)))}
+  group.addEventListener('toggle',populate);
+  if(expanded)populate();
   return group;
 }
 function drawBrands(grid,items){
@@ -106,8 +112,9 @@ function makeRegistrarAccordion(def,rows){
   const content=node('div','du-rt-brand-content');
   if(rows.length){
     const list=node('div','du-olivetti-list du-rt-model-grid');
-    rows.forEach(product=>list.append(modelCard(product)));
     content.append(list);
+    let populated=false;
+    group.addEventListener('toggle',()=>{if(!group.open||populated)return;populated=true;rows.forEach(product=>list.append(modelCard(product)))});
   }else{
     const message=node('div','du-rt-brand-empty');
     message.append(node('p','', 'Le schede dei registratori '+def.name+' saranno disponibili prossimamente. Per modelli, configurazioni e assistenza puoi già contattare DUEMME.'));
