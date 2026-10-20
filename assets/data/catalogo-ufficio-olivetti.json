@@ -48,6 +48,8 @@
       "name": "d-Copia 4524MFplus",
       "type": "MFP A4 B/N",
       "description": "Multifunzione Olivetti formato A4, bianco e nero. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Desktop Mono Copier, Printer, Scanner, Fax\nFino a 45 ppm in b/n\nStandard 1,5GB; max. 3,5GB (opzionale)\ndi serie A6-A4\nCassetto di serie: 1x500 ff + bypass 100 ff; opzionali: max 4 x 500 ff",
+      "image": "/assets/1-7.png",
       "kind": "catalogo",
       "active": true
     },
@@ -59,6 +61,8 @@
       "name": "d-Copia 5524MF",
       "type": "MFP A4 B/N",
       "description": "Multifunzione Olivetti formato A4, bianco e nero. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Desktop Mono Copier, Printer, Scanner, Fax\nFino a 55 ppm in b/n\nStandard 1,5GB; max. 3,5GB (opzionale)\ndi serie A6-A4\nCassetto di serie: 1x500 ff + bypass 100 ff; opzionali: max 4 x 500 ff",
+      "image": "/assets/1-8.png",
       "kind": "catalogo",
       "active": true
     },
@@ -70,6 +74,8 @@
       "name": "d-Copia 3524MF",
       "type": "MFP A4 B/N",
       "description": "Multifunzione Olivetti formato A4, bianco e nero. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Desktop Mono Copier, Printer, Scanner, Fax \nFino a 35 ppm in b/n\ndi serie 512 Mb; (max 1.536 Mb)\n1.200 x 1.200 dpi , 600 dpi\ndi serie A6-A4\nCassetto di serie: 1x250 ff + bypass 100 ff ; opzionali: max 2 x 250 ff\nPCL 6 (PCL 5e/PCL-XL), PostScript 3 (KPDL 3), XPS/OpenXPS\n1.200 dpi , 600 dpi , 300 dpi\nUSB 2.0, USB Host, Scheda Ethernet 10/100/1000 Base TX, ",
+      "image": "/assets/1-9.png",
       "kind": "catalogo",
       "active": true
     },
@@ -81,6 +87,8 @@
       "name": "d-Copia 3524MFplus",
       "type": "MFP A4 B/N",
       "description": "Multifunzione Olivetti formato A4, bianco e nero. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Desktop Mono Copier, Printer, Scanner, Fax ;Slot SD/SDHC \nWireless LAN (solo d-Copia 3524MF plus)\nFino a 35 ppm in b/n\ndi serie 512 Mb; (max 1.536 Mb)\n1.200 x 1.200 dpi , 600 dpi\ndi serie A6-A4\nCassetto di serie: 1x250 ff + bypass 100 ff ; opzionali: max 2 x 250 ff\nPCL 6 (PCL 5e/PCL-XL), PostScript 3 (KPDL 3), XPS/OpenXPS\n1.200 dpi , 600 dpi , 300 dpi\nUSB 2.0, USB Host, Scheda Ethernet 10/100/1000 Base TX, Slot SD/SDHC (opz.) Wireless LAN (solo d-Copia 3524MFplus)",
+      "image": "/assets/1-10.png",
       "kind": "catalogo",
       "active": true
     },
@@ -92,6 +100,8 @@
       "name": "d-Copia 4023MF",
       "type": "MFP A4 B/N",
       "description": "Multifunzione Olivetti formato A4, bianco e nero. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Desktop Mono Copier, Printer, Scanner, Fax ;Slot SD/SDHC (opz.) \nFino a 40 ppm in b/n\ndi serie 512 Mb; (max 1.536 Mb)\n1.200 dpi, 600 dpi, 300 dpi\ndi serie A6-A4\nCassetto  di serie: 1x250 ff + bypass 100 ff; opzionali: max 2 x 250 ff",
+      "image": "/assets/2.jpg",
       "kind": "catalogo",
       "active": true
     },
@@ -103,6 +113,8 @@
       "name": "d-Copia 4024MF",
       "type": "MFP A4 B/N",
       "description": "Multifunzione Olivetti formato A4, bianco e nero. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Desktop Mono Copier, Printer, Scanner, Fax ;Slot SD/SDHC \nFino a 40 ppm in b/n\ndi serie 512 Mb; (max 1.536 Mb)\n1.200 dpi, 600 dpi, 300 dpi\ndi serie A6-A4\nCassetto di serie: 1x250 ff + bypass 100 ff; opzionali: max 2 x 250 ff",
+      "image": "/assets/2-1.jpg",
       "kind": "catalogo",
       "active": true
     },
@@ -114,6 +126,8 @@
       "name": "d-Copia 4024MFplus",
       "type": "MFP A4 B/N",
       "description": "Multifunzione Olivetti formato A4, bianco e nero. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Desktop Mono Copier, Printer, Scanner, Fax ;Slot SD/SDHC  \nWireless LAN (solo d-Copia 4024MF plus)\nFino a 40 ppm in b/n\ndi serie 512 Mb; (max 1.536 Mb)\n1.200 dpi, 600 dpi, 300 dpi\ndi serie A6-A4\nCassetto di serie: 1x250 ff + bypass 100 ff; opzionali: max 2 x 250 ff",
+      "image": "/assets/2-2.jpg",
       "kind": "catalogo",
       "active": true
     },
@@ -125,6 +139,8 @@
       "name": "d-Color MF3533",
       "type": "MFP A4 Colore",
       "description": "Multifunzione Olivetti formato A4, colore. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Multifunzione digitale laser (copia, stampa, scanner) 35 ppm a colori. Corpo base,\n1x250ff, bypass 100ff, fronte retro, alimentatore f/r , controller di stampa e scanner di\nrete",
+      "image": "/assets/3533-3534.jpg",
       "kind": "catalogo",
       "active": true
     },
@@ -136,39 +152,8 @@
       "name": "d-Color MF3534",
       "type": "MFP A4 Colore",
       "description": "Multifunzione Olivetti formato A4, colore. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
-      "kind": "catalogo",
-      "active": true
-    },
-    {
-      "id": "oli-a4-colore-d-color-mf3302en",
-      "category": "multifunzioni",
-      "group": "a4-colore",
-      "brand": "Olivetti",
-      "name": "d-Color MF3302en",
-      "type": "MFP A4 Colore",
-      "description": "Multifunzione Olivetti formato A4, colore. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
-      "kind": "catalogo",
-      "active": true
-    },
-    {
-      "id": "oli-a4-colore-d-color-mf3303en",
-      "category": "multifunzioni",
-      "group": "a4-colore",
-      "brand": "Olivetti",
-      "name": "d-Color MF3303en",
-      "type": "MFP A4 Colore",
-      "description": "Multifunzione Olivetti formato A4, colore. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
-      "kind": "catalogo",
-      "active": true
-    },
-    {
-      "id": "oli-a4-colore-d-color-mf4003en",
-      "category": "multifunzioni",
-      "group": "a4-colore",
-      "brand": "Olivetti",
-      "name": "d-Color MF4003en",
-      "type": "MFP A4 Colore",
-      "description": "Multifunzione Olivetti formato A4, colore. Richiedi informazioni su configurazione, disponibilità e condizioni di fornitura.",
+      "specs": "Multifunzione digitale laser (copia, stampa, scanner, fax) 35 ppm a colori. Corpo base,\n1x250ff, bypass 100ff, fronte retro, alimentatore f/r , controller di stampa e scanner di\nrete",
+      "image": "/assets/3533-3534-1.jpg",
       "kind": "catalogo",
       "active": true
     },
