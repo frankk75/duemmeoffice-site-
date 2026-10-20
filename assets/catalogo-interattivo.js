@@ -31,7 +31,18 @@ function show(p){current=p;if(!p)return;
 }
 // Tipologie ricavate dal campo 'type' o, in assenza, dal gruppo Pages CMS.
 const groupLabels={'a4-bn':'Multifunzioni A4 B/N','a4-colore':'Multifunzioni A4 colore','a3-bn':'Multifunzioni A3 B/N','a3-colore':'Multifunzioni A3 colore','wide-large-format':'Wide e large format','canon-plotter':'Plotter','olivetti':'Registratori Olivetti','axon':'Registratori Axon','custom':'Registratori Custom'};
-function typeName(p){return String(p.type||groupLabels[p.group]||p.group||(category==='registratori'?'Registratori telematici':'Altre multifunzioni')).trim()}
+// V99: categorie omogenee per i registratori; le multifunzioni restano invariate.
+function registrarType(p){
+ const t=String(p.type||'').toLocaleLowerCase('it').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+ const n=String(p.name||'').toLocaleLowerCase('it').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+ if(/stampant|printer|prt 88|printo/.test(t+' '+n))return 'Stampanti fiscali telematiche';
+ if(/pc pos|touchscreen android|sistema pos|pos touchscreen/.test(t+' '+n)||/\bnova\b/.test(n))return 'Sistemi POS touchscreen';
+ if(/ibrid/.test(t+' '+n)||/\bduo\b/.test(n))return 'Registratori telematici ibridi';
+ if(/portatil|ambulant|mobile|compatto/.test(t+' '+n)||/form 100|\bgeo\b/.test(n))return 'Registratori telematici portatili';
+ if(/android|touch/.test(t+' '+n)||/form 500|nettun/.test(n))return 'Registratori telematici Android e touch';
+ return 'Registratori telematici tradizionali';
+}
+function typeName(p){return category==='registratori'?registrarType(p):String(p.type||groupLabels[p.group]||p.group||'Altre multifunzioni').trim()}
 function models(){const filtered=products.filter(p=>p.brand===brand.value&&typeName(p)===type.value);options(model,filtered.map(p=>({value:p.id||p.name,label:p.name})));show(filtered[0])}
 function types(){const names=[...new Set(products.filter(p=>p.brand===brand.value).map(typeName))];options(type,names.map(n=>({value:n,label:n})));models()}
 brand.addEventListener('change',types);
