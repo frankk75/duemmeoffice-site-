@@ -3,6 +3,30 @@
 const menu=document.getElementById('menu'),nav=document.getElementById('links');
 if(menu&&nav){const close=()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'};menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});}
 
+/* DUEMME V74 — partita IVA visibile nei recapiti della testata su tutte le pagine. */
+function initHeaderVat(){
+  document.querySelectorAll('.du-top-v39 .du-header-contacts').forEach(contacts=>{
+    if(contacts.querySelector('.du-header-vat'))return;
+    const vat=document.createElement('div');
+    vat.className='du-header-vat';
+    vat.setAttribute('aria-label','Partita IVA DUEMME: 01492870892');
+    const icon=document.createElement('span');icon.setAttribute('aria-hidden','true');icon.textContent='▣';
+    const value=document.createElement('strong');value.textContent='P. IVA 01492870892';
+    vat.append(icon,value);contacts.append(vat);
+  });
+  if(document.getElementById('du-v74-header-vat'))return;
+  const style=document.createElement('style');style.id='du-v74-header-vat';
+  style.textContent=`
+    .du-top-v39 .du-header-contacts .du-header-vat{display:flex;gap:11px;align-items:center;min-width:0;line-height:1.35;color:#143754;font-size:14px;font-weight:650}
+    .du-top-v39 .du-header-contacts .du-header-vat>span{display:inline-block;flex:none;color:#1470b6;font-size:19px;width:19px;text-align:center}
+    .du-top-v39 .du-header-contacts .du-header-vat strong{font-size:14px;font-weight:750}
+    @media(max-width:680px){.du-top-v39 .du-header-contacts .du-header-vat{gap:5px;font-size:10px}.du-top-v39 .du-header-contacts .du-header-vat>span{font-size:15px;width:15px}.du-top-v39 .du-header-contacts .du-header-vat strong{font-size:10.5px}}
+    @media(max-width:380px){.du-top-v39 .du-header-contacts .du-header-vat{gap:4px}.du-top-v39 .du-header-contacts .du-header-vat strong{font-size:9.3px}}
+  `;
+  document.head.append(style);
+}
+initHeaderVat();
+
 /* DUEMME V57 — testata compatta durante lo scorrimento, comune a tutte le pagine. */
 function initCompactHeader(){
   const header=document.querySelector('.du-top-v39');
