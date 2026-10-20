@@ -1,4 +1,6 @@
-DUEMME V51 - Aggiunta P. IVA 01492870892 nel footer di tutte le pagine.
-Sostituire nella root GitHub SOLO i file HTML contenuti in questo pacchetto (inclusa privacy.html).
-Non modificare assets, CSS, immagini, JS o file del catalogo.
-Mantiene titolo SEO V50 e modifiche privacy V48.
+DUEMME V86 - PROVA REVERSIBILE
+
+Per attivare: caricare su GitHub nella ROOT del sito SOLO il file ATTIVA/stampanti-multifunzione.html, senza creare la cartella ATTIVA.
+Per ripristinare: caricare nella ROOT SOLO RIPRISTINA_VERSIONE_PRECEDENTE/stampanti-multifunzione.html sovrascrivendo quello modificato.
+Non caricare entrambe le versioni insieme. Non modificare assets/data, catalogo CMS o .pages.yml.
+Nota: file di ripristino basato sulla versione V81 della pagina, verificata nella struttura principale con la pagina attualmente pubblicata.
