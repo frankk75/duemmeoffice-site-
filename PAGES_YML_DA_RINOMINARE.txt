@@ -1,0 +1,177 @@
+# DUEMME V100: tipologie predefinite e personalizzate; retrocompatibile.
+# DUEMME V95: sei cataloghi Pages CMS, fino a tre foto per prodotto.
+media:
+  input: assets
+  output: /assets
+  rename: safe
+  extensions:
+  - jpg
+  - jpeg
+  - png
+  - webp
+content:
+- name: catalogo_ufficio_olivetti
+  label: Macchine per ufficio · Olivetti
+  type: file
+  path: assets/data/catalogo-ufficio-olivetti.json
+  format: json
+  fields: &id001
+  - name: version
+    label: Versione dati
+    type: number
+    readonly: true
+  - name: items
+    label: Prodotti del catalogo
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{brand} · {name}'
+    fields:
+    - name: id
+      label: Codice interno (lasciare invariato)
+      type: string
+    - name: category
+      label: Sezione del sito
+      type: select
+      required: true
+      options:
+        values:
+        - name: multifunzioni
+          label: Macchine multifunzione
+        - name: registratori
+          label: Registratori telematici
+    - name: group
+      label: Gruppo prodotti (macchine per ufficio e registratori)
+      type: select
+      options:
+        values:
+        - name: a4-bn
+          label: MFP A4 B/N
+        - name: a4-colore
+          label: MFP A4 Colore
+        - name: a3-bn
+          label: MFP A3 B/N
+        - name: a3-colore
+          label: MFP A3 Colore
+        - name: wide-large-format
+          label: Ricoh – Wide e large format
+        - name: canon-plotter
+          label: Canon – Plotter imagePROGRAF
+        - name: olivetti
+          label: Registratori – Olivetti
+        - name: axon
+          label: Registratori – Axon
+        - name: custom
+          label: Registratori – Custom
+    - name: brand
+      label: Marca
+      type: string
+      required: true
+    - name: name
+      label: Nome del modello
+      type: string
+      required: true
+    - name: type_preset
+      label: Tipologia esistente (scegliere oppure usare la tipologia personalizzata)
+      type: select
+      description: Selezionare una tipologia predefinita. Per crearne una nuova, lasciare vuoto questo campo e compilare Tipologia personalizzata. I prodotti precedenti mantengono la propria tipologia.
+      options:
+        values:
+        - name: Multifunzioni A4 B/N
+          label: Multifunzioni A4 B/N
+        - name: Multifunzioni A4 colore
+          label: Multifunzioni A4 colore
+        - name: Multifunzioni A3 B/N
+          label: Multifunzioni A3 B/N
+        - name: Multifunzioni A3 colore
+          label: Multifunzioni A3 colore
+        - name: Wide e large format
+          label: Wide e large format
+        - name: Plotter
+          label: Plotter
+        - name: Registratori telematici tradizionali
+          label: Registratori telematici tradizionali
+        - name: Registratori telematici Android e touch
+          label: Registratori telematici Android e touch
+        - name: Registratori telematici portatili
+          label: Registratori telematici portatili
+        - name: Registratori telematici ibridi
+          label: Registratori telematici ibridi
+        - name: Stampanti fiscali telematiche
+          label: Stampanti fiscali telematiche
+        - name: Sistemi POS touchscreen
+          label: Sistemi POS touchscreen
+    - name: type_custom
+      label: Nuova tipologia personalizzata
+      type: string
+      description: Per creare una nuova tipologia scrivere qui il nome. Ha priorita sulla scelta esistente. Usare la stessa dicitura sugli altri articoli per raggrupparli.
+    - name: type
+      label: Tipologia precedente (articoli gia pubblicati)
+      type: string
+      description: Campo storico mantenuto per compatibilita. Per nuovi articoli usare Tipologia esistente oppure Nuova tipologia personalizzata.
+    - name: description
+      label: Descrizione prodotto
+      type: text
+    - name: specs
+      label: Caratteristiche tecniche (una per riga)
+      type: text
+      description: Ogni riga viene mostrata come caratteristica nella scheda. Inserire solo dati verificati.
+    - name: image
+      label: Foto 1 – principale
+      type: image
+      description: Foto principale del prodotto. Preferire immagini autorizzate.
+    - name: image2
+      label: Foto 2 – opzionale
+      type: image
+      description: Seconda fotografia del prodotto, visualizzata nella galleria interattiva.
+    - name: image3
+      label: Foto 3 – opzionale
+      type: image
+      description: Terza fotografia del prodotto, visualizzata nella galleria interattiva.
+    - name: source
+      label: Scheda ufficiale produttore (opzionale)
+      type: string
+    - name: price
+      label: Prezzo o offerta (opzionale)
+      type: string
+    - name: kind
+      label: Tipo scheda
+      type: select
+      options:
+        values:
+        - catalogo
+        - offerta
+    - name: active
+      label: Pubblicato sul sito
+      type: boolean
+- name: catalogo_ufficio_ricoh
+  label: Macchine per ufficio · Ricoh
+  type: file
+  path: assets/data/catalogo-ufficio-ricoh.json
+  format: json
+  fields: *id001
+- name: catalogo_ufficio_canon
+  label: Macchine per ufficio · Canon
+  type: file
+  path: assets/data/catalogo-ufficio-canon.json
+  format: json
+  fields: *id001
+- name: catalogo_registratori_olivetti
+  label: Registratori telematici · Olivetti
+  type: file
+  path: assets/data/catalogo-registratori-olivetti.json
+  format: json
+  fields: *id001
+- name: catalogo_registratori_axon
+  label: Registratori telematici · Axon
+  type: file
+  path: assets/data/catalogo-registratori-axon.json
+  format: json
+  fields: *id001
+- name: catalogo_registratori_custom
+  label: Registratori telematici · Custom
+  type: file
+  path: assets/data/catalogo-registratori-custom.json
+  format: json
+  fields: *id001
