@@ -62,3 +62,27 @@
 .du-v97-wycash-media img{display:block;width:100%;height:auto;max-height:310px;object-fit:contain}
 .du-v97-wycash a:focus-visible{outline:3px solid #1e9dbe;outline-offset:4px}
 @media(max-width:760px){.du-v97-wycash{grid-template-columns:1fr}.du-v97-wycash-media{max-width:440px;width:100%;margin:auto}}
+
+/* V101 — rifinitura responsive, leggibilità e interazioni */
+.du-v88{overflow:hidden;isolation:isolate}
+.du-v88-top{max-width:760px}
+.du-v88-selectors{gap:clamp(10px,1.5vw,18px);align-items:end}
+.du-v88-selectors label{min-width:0;line-height:1.4}
+.du-v88-selectors select{min-height:48px;line-height:1.4;box-shadow:0 2px 7px #00172b18;transition:border-color .2s,box-shadow .2s}
+.du-v88-selectors select:hover:not(:disabled){border-color:#29b8d2;box-shadow:0 0 0 2px #36cce52b}
+.du-v88-selectors select:disabled{opacity:.65;cursor:wait}
+.du-v88-info{min-width:0;overflow-wrap:anywhere}
+.du-v88-info h3{line-height:1.23}
+.du-v88-description{line-height:1.7}
+.du-v88-visual{align-items:stretch}
+.du-v88-image{width:100%;min-width:0}
+.du-v88-image img{display:block;max-width:94%;max-height:94%;object-fit:contain}
+.du-v95-thumbs{flex-wrap:wrap}
+.du-v95-gallery button:not(:disabled):hover,.du-v88-enlarge:not(:disabled):hover{background:#d9f4fc}
+.du-v88-cta{min-height:44px;display:inline-flex;align-items:center;justify-content:center;text-align:center}
+.du-v88-cta:hover{background:#8de9f0}
+.du-v88[aria-busy=true] .du-v88-layout{opacity:.55}
+@media(prefers-reduced-motion:no-preference){.du-v101-refresh{animation:du-v101-in .22s ease-out}@keyframes du-v101-in{from{opacity:.65;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}}
+@media(max-width:800px){.du-v88{padding:clamp(16px,4vw,28px)}.du-v88-layout{gap:20px}}
+@media(max-width:480px){.du-v88{padding:16px;border-radius:16px}.du-v88-selectors{gap:12px}.du-v88-image{height:clamp(235px,72vw,320px)}.du-v88-info{padding:4px 0}.du-v88-cta{width:100%}.du-v95-gallery{gap:12px}.du-v95-thumb{min-width:56px}}
+@media(prefers-reduced-motion:reduce){.du-v88 *{animation:none!important;transition:none!important}}
