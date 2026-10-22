@@ -1,4 +1,4 @@
-/* DUEMME V101: catalogo interattivo unico, alimentato dai sei JSON di Pages CMS. */
+/* DUEMME V108: registratori filtrati solo per marca e modello. DUEMME V101: catalogo interattivo unico, alimentato dai sei JSON di Pages CMS. */
 (()=>{'use strict';
 const root=document.querySelector('.du-v88[data-du-v88]');if(!root)return;
 const category=root.dataset.duV88;
@@ -53,11 +53,11 @@ function typeName(p){
  if(preset)return preset;
  return category==='registratori'?registrarType(p):String(p.type||groupLabels[p.group]||p.group||'Altre multifunzioni').trim();
 }
-function models(){const filtered=products.filter(p=>p.brand===brand.value&&typeName(p)===type.value).sort((a,b)=>collator.compare(a.name,b.name));options(model,filtered.map(p=>({value:p.id||p.name,label:p.name})));model.disabled=!filtered.length;show(filtered[0])}
-function types(){const names=[...new Set(products.filter(p=>p.brand===brand.value).map(typeName))].sort(collator.compare);options(type,names.map(n=>({value:n,label:n})));type.disabled=!names.length;models()}
+function models(){const filtered=products.filter(p=>p.brand===brand.value&&(category==='registratori'||type.value==='__all__'||typeName(p)===type.value)).sort((a,b)=>collator.compare(a.name,b.name));options(model,filtered.map(p=>({value:p.id||p.name,label:p.name})));model.disabled=!filtered.length;show(filtered[0])}
+function types(){if(category==='registratori'){options(type,[{value:'__all__',label:'Tutte le tipologie'}]);type.disabled=true;models();return}const names=[...new Set(products.filter(p=>p.brand===brand.value).map(typeName))].sort(collator.compare);options(type,(category==='registratori'?[{value:'__all__',label:'Tutte le tipologie'}]:[]).concat(names.map(n=>({value:n,label:n}))));type.disabled=!names.length;models()}
 brand.addEventListener('change',types);
 type.addEventListener('change',models);
-model.addEventListener('change',()=>show(products.find(p=>p.brand===brand.value&&typeName(p)===type.value&&(p.id||p.name)===model.value)));
+model.addEventListener('change',()=>show(products.find(p=>p.brand===brand.value&&(category==='registratori'||type.value==='__all__'||typeName(p)===type.value)&&(p.id||p.name)===model.value)));
 prev.addEventListener('click',()=>{if(photos.length>1){index=(index+photos.length-1)%photos.length;renderPhoto()}});
 next.addEventListener('click',()=>{if(photos.length>1){index=(index+1)%photos.length;renderPhoto()}});
 enlarge.addEventListener('click',()=>{if(!photos.length)return;
