@@ -1,0 +1,9 @@
+PAGINA NOLEGGIO DEDICATA – INTEGRAZIONE TESTO
+File: noleggio-multifunzioni-siracusa.html
+
+Aggiungere nel contenuto principale, nella sezione che presenta le soluzioni di noleggio:
+
+<h3>Noleggio multifunzioni usate garantite</h3>
+<p>Oltre alle apparecchiature nuove, DUEMME propone, in base alla disponibilità in showroom, anche il noleggio di multifunzioni usate garantite, selezionate e controllate dai nostri tecnici. Contattaci per conoscere i modelli disponibili e ricevere una proposta personalizzata.</p>
+
+NOTA: Questa pagina non è inclusa come file HTML sostitutivo, perché non presente nei pacchetti sorgente disponibili in questa sessione. Per evitare di sovrascrivere il file corrente con una ricostruzione incompleta, l'integrazione è fornita come testo da inserire nel file esistente.
