@@ -86,3 +86,12 @@
 .du-privacy-page a:not(.du-nav-strip a){color:#076ea9;text-decoration:underline;text-underline-offset:2px;}
 .du-privacy-page footer a{color:#d5edff!important;}
 @media(max-width:620px){.du-privacy-page main{padding:18px 0 42px}.du-privacy-page .du-privacy-article{padding:23px 17px;border-radius:12px}.du-protected-site .du-privacy-check{padding:13px;gap:10px}}
+
+/* V113: campo honeypot FormSubmit invisibile, ma presente nel DOM e inviato con il modulo. */
+.du-form-honeypot,
+.du-protected-site .du-form-honeypot,
+.du-protected-site form .du-form-honeypot,
+.du-protected-site form .du-form-honeypot * {
+  display: none !important;
+  visibility: hidden !important;
+}
