@@ -1,0 +1,17 @@
+DUEMME V122 - Consolidamento V119 + V120 + V121
+
+Carica su GitHub i seguenti file direttamente:
+- index.html
+- informatica.html
+- assets/informatica-catalogo.css
+- assets/informatica-catalogo.js
+- assets/data/catalogo-informatica.json
+- assets/informatica-showroom.webp
+
+ATTENZIONE - pagina scolastica V120:
+Il pacchetto V120 originale forniva soltanto un blocco HTML e uno script di aggiornamento, NON la pagina completa.
+Per conservare le altre sezioni della pagina scolastica, scarica da GitHub il file corrente forniture-scuola-siracusa.html, posizionalo accanto ai due file seguenti e lancia:
+python build_school_patch.py forniture-scuola-siracusa.html
+Poi carica su GitHub il file aggiornato.
+
+Non caricare NUOVA_SEZIONE_SCOLASTICA.html come pagina autonoma.
